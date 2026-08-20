@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOZAR PALACE | Premium Celebrations & Weddings</title>
+    <meta name="description" content="Mozar Palace is an elegant destination for weddings, celebrations, and unforgettable occasions. Experience royal ambiance and premium hospitality.">
+    <link rel="canonical" href="https://www.mozarpalace.com">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="MOZAR PALACE | Premium Celebrations">
+    <meta property="og:description" content="Where every celebration becomes a royal memory. Plan your grand event with us.">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- SEO Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EventVenue",
+      "name": "Mozar Palace",
+      "description": "An elegant destination for weddings, celebrations and unforgettable occasions.",
+      "url": "https://www.mozarpalace.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "[Insert Address]",
+        "addressLocality": "[Insert City]",
+        "addressRegion": "[Insert State]",
+        "postalCode": "[Insert Zip]",
+        "addressCountry": "[Insert Country]"
+      }
+    }
+    </script>
+
+    <style>
+        /* CSS Variables */
+        :root {
+            --primary-bg: #26372B; /* Deep Forest Green */
+            --accent-royal: #F5A623; /* Royal Gold */
+            --accent-luxury: #D89A20; /* Luxury Gold */
+            --bg-light: #F8F4E9; /* Warm Ivory */
+            --white: #FFFFFF;
+            --text-dark: #151A17; /* Charcoal */
+            
+            --font-head: 'Playfair Display', serif;
+            --font-sub: 'Montserrat', sans-serif;
+            --font-body: 'Poppins', sans-serif;
+            
+            --nav-height: 80px;
+            --transition: all 0.3s ease;
+        }
+
+        /* Reset & Base */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body {
+            font-family: var(--font-body);
+            background-color: var(--primary-bg);
+            color: var(--bg-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 { font-family: var(--font-head); font-weight: normal; margin-bottom: 1rem; color: var(--accent-luxury); }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+        img { max-width: 100%; height: auto; display: block; }
+
+        /* Typography Utilities */
+        .eyebrow {
+            font-family: var(--font-sub);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--accent-royal);
+            margin-bottom: 1rem;
+            display: block;
+        }
+        .text-center { text-align: center; }
+        .section-title { font-size: 3rem; margin-bottom: 1rem; }
+        .section-subtitle { font-family: var(--font-sub); font-size: 1rem; color: var(--bg-light); opacity: 0.8; max-width: 600px; margin: 0 auto 3rem; }
+        
+        /* Layout Utilities */
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 4rem 0; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+        
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            font-family: var(--font-sub);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 1rem 2.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+            border-radius: 2px;
+            font-weight: 500;
+        }
+        .btn-primary {
+            background: var(--accent-luxury);
+            color: var(--primary-bg);
+            border: 1px solid var(--accent-luxury);
+        }
+        .btn-primary:hover { background: transparent; color: var(--accent-luxury); }
+        .btn-outline {
+            background: transparent;
+            color: var(--accent-luxury);
+            border: 1px solid var(--accent-luxury);
+        }
+        .btn-outline:hover { background: var(--accent-luxury); color: var(--primary-bg); }
+        
+        /* Ornaments */
+        .ornament {
+            width: 100%;
+            height: 20px;
+            background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg"><path d="M50,10 L45,5 L50,0 L55,5 Z M0,10 L45,10 M55,10 L100,10" stroke="%23D89A20" stroke-width="1" fill="%23D89A20"/></svg>') center/contain no-repeat;
+            margin: 2rem 0;
+        }
+
+        /* Navigation */
+        header {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            height: var(--nav-height);
+            background: rgba(38, 55, 43, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(216, 154, 32, 0.2);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            transition: var(--transition);
+        }
+        .nav-container {
+            width: 95%; max-width: 1400px; margin: 0 auto;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .logo { font-family: var(--font-head); font-size: 1.8rem; color: var(--accent-luxury); font-weight: 600; letter-spacing: 2px; }
+        .nav-links { display: flex; gap: 2rem; align-items: center; }
+        .nav-links a { font-family: var(--font-sub); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: var(--bg-light); transition: var(--transition); }
+        .nav-links a:hover, .nav-links a.active { color: var(--accent-luxury); }
+        .hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
+        .hamburger span { display: block; width: 25px; height: 2px; background: var(--accent-luxury); transition: var(--transition); }
+        
+        /* Mobile Nav */
+        .mobile-nav {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
+            background: var(--primary-bg); z-index: 999;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            opacity: 0; visibility: hidden; transition: var(--transition);
+        }
+        .mobile-nav.active { opacity: 1; visibility: visible; }
+        .mobile-nav a { font-family: var(--font-head); font-size: 2rem; color: var(--accent-luxury); margin: 1rem 0; text-transform: capitalize; }
+        .mobile-nav-close { position: absolute; top: 25px; right: 5%; font-size: 2rem; color: var(--accent-luxury); cursor: pointer; }
+
+        /* SPA Pages */
+        .page-section { display: none; animation: fadeIn 0.6s ease; min-height: 100vh; padding-top: var(--nav-height); }
+        .page-section.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* Hero Section */
+        .hero {
+            position: relative; height: 100vh; display: flex; align-items: center; justify-content: center;
+            text-align: center; padding-top: 0; overflow: hidden;
+            background: url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+        }
+        .hero::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(38, 55, 43, 0.75); }
+        .hero-content { position: relative; z-index: 1; max-width: 800px; padding: 0 20px; }
+        .hero h1 { font-size: 5rem; color: var(--white); margin: 1rem 0; text-shadow: 0 4px 20px rgba(0,0,0,0.5); }
+        .hero p { font-size: 1.2rem; margin-bottom: 2.5rem; color: var(--bg-light); font-weight: 300; }
+        .hero-btns { display: flex; gap: 1rem; justify-content: center; }
+        
+        /* Intro Section */
+        .intro-img { position: relative; }
+        .intro-img img { border-radius: 4px; box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+        .intro-img::before { content: ''; position: absolute; top: -20px; left: -20px; width: 100%; height: 100%; border: 2px solid var(--accent-luxury); z-index: -1; }
+
+        /* Occasions / Cards */
+        .card {
+            background: rgba(255,255,255,0.03); border: 1px solid rgba(216, 154, 32, 0.2);
+            padding: 2.5rem; text-align: center; transition: var(--transition); border-radius: 4px;
+        }
+        .card:hover { transform: translateY(-10px); border-color: var(--accent-luxury); background: rgba(255,255,255,0.05); }
+        .card h3 { font-size: 1.5rem; margin-bottom: 1rem; }
+        .card p { font-size: 0.95rem; color: #ccc; }
+
+        /* Light Section */
+        .section-light { background-color: var(--bg-light); color: var(--text-dark); }
+        .section-light h2, .section-light h3 { color: var(--primary-bg); }
+        .section-light .btn-primary { background: var(--primary-bg); color: var(--accent-luxury); border-color: var(--primary-bg); }
+        .section-light .btn-primary:hover { background: transparent; color: var(--primary-bg); }
+        .section-light .eyebrow { color: var(--primary-bg); }
+        .section-light .ornament { background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg"><path d="M50,10 L45,5 L50,0 L55,5 Z M0,10 L45,10 M55,10 L100,10" stroke="%2326372B" stroke-width="1" fill="%2326372B"/></svg>') center/contain no-repeat; }
+        
+        /* Wedding Immersive */
+        .wedding-immersive {
+            background: linear-gradient(rgba(38, 55, 43, 0.9), rgba(38, 55, 43, 0.9)), url('https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=1920&q=80') center/cover fixed;
+            padding: 6rem 0; text-align: center;
+        }
+        .wedding-immersive h2 { font-size: 3.5rem; color: var(--accent-luxury); }
+
+        /* Space Catalog */
+        .space-img { height: 250px; object-fit: cover; width: 100%; border-radius: 4px 4px 0 0; }
+        .space-card { background: #1a251d; border-radius: 4px; overflow: hidden; border: 1px solid rgba(216, 154, 32, 0.2); }
+        .space-details { padding: 2rem; }
+        .space-meta { display: flex; justify-content: space-between; font-size: 0.85rem; font-family: var(--font-sub); color: var(--accent-royal); margin-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem; }
+
+        /* Gallery */
+        .gallery-filters { display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 3rem; }
+        .filter-btn { background: none; border: none; color: var(--bg-light); font-family: var(--font-sub); cursor: pointer; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; padding: 0.5rem 1rem; transition: var(--transition); border-bottom: 2px solid transparent; }
+        .filter-btn.active, .filter-btn:hover { color: var(--accent-luxury); border-color: var(--accent-luxury); }
+        .gallery-grid { columns: 3 300px; gap: 1.5rem; }
+        .gallery-item { break-inside: avoid; margin-bottom: 1.5rem; position: relative; overflow: hidden; border-radius: 4px; cursor: pointer; }
+        .gallery-item img { width: 100%; transition: transform 0.5s ease; }
+        .gallery-item:hover img { transform: scale(1.05); }
+        .gallery-overlay { position: absolute; inset: 0; background: rgba(38, 55, 43, 0.6); display: flex; align-items: center; justify-content: center; opacity: 0; transition: var(--transition); }
+        .gallery-item:hover .gallery-overlay { opacity: 1; }
+        .gallery-overlay i { color: var(--accent-luxury); font-size: 2rem; font-family: var(--font-head); font-style: italic; }
+
+        /* Lightbox */
+        .lightbox { position: fixed; inset: 0; background: rgba(21, 26, 23, 0.95); z-index: 2000; display: none; align-items: center; justify-content: center; flex-direction: column; }
+        .lightbox.active { display: flex; }
+        .lightbox img { max-height: 80vh; max-width: 90vw; border: 2px solid var(--accent-luxury); box-shadow: 0 0 30px rgba(0,0,0,0.8); }
+        .lightbox-close { position: absolute; top: 30px; right: 30px; font-size: 2.5rem; color: var(--accent-luxury); cursor: pointer; }
+
+        /* Timeline */
+        .timeline { position: relative; max-width: 800px; margin: 0 auto; }
+        .timeline::before { content: ''; position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: rgba(216, 154, 32, 0.3); transform: translateX(-50%); }
+        .timeline-item { display: flex; justify-content: space-between; align-items: center; margin-bottom: 3rem; position: relative; }
+        .timeline-item:nth-child(even) { flex-direction: row-reverse; }
+        .timeline-content { width: 45%; background: rgba(255,255,255,0.03); padding: 2rem; border: 1px solid rgba(216, 154, 32, 0.2); border-radius: 4px; }
+        .timeline-dot { width: 20px; height: 20px; background: var(--accent-luxury); border-radius: 50%; position: absolute; left: 50%; transform: translateX(-50%); box-shadow: 0 0 0 5px var(--primary-bg); }
+        .timeline-num { font-family: var(--font-head); font-size: 2.5rem; color: var(--accent-royal); opacity: 0.5; margin-bottom: 0.5rem; display: block; }
+
+        /* Testimonials */
+        .testimonial-slider { max-width: 800px; margin: 0 auto; text-align: center; position: relative; overflow: hidden; padding: 2rem 0; }
+        .testimonial-slide { display: none; animation: fadeIn 0.5s ease; }
+        .testimonial-slide.active { display: block; }
+        .testimonial-text { font-size: 1.5rem; font-family: var(--font-head); font-style: italic; margin-bottom: 1.5rem; color: var(--bg-light); }
+        .testimonial-author { font-family: var(--font-sub); color: var(--accent-luxury); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
+        .slider-controls { display: flex; justify-content: center; gap: 1rem; margin-top: 2rem; }
+        .slider-dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(216, 154, 32, 0.3); cursor: pointer; }
+        .slider-dot.active { background: var(--accent-luxury); }
+
+        /* Forms */
+        .form-group { margin-bottom: 1.5rem; position: relative; }
+        .form-control { width: 100%; padding: 1rem 0; background: transparent; border: none; border-bottom: 1px solid rgba(255,255,255,0.2); color: var(--white); font-family: var(--font-body); font-size: 1rem; transition: var(--transition); }
+        .form-control:focus { outline: none; border-bottom-color: var(--accent-luxury); }
+        .form-control::placeholder { color: rgba(255,255,255,0.5); }
+        select.form-control { appearance: none; background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="%23D89A20"><path d="M0 3h12L6 9z"/></svg>') no-repeat right center; }
+        .form-control option { background: var(--primary-bg); color: var(--white); }
+        .form-success { display: none; background: rgba(38, 55, 43, 0.9); border: 1px solid var(--accent-luxury); padding: 2rem; text-align: center; border-radius: 4px; margin-top: 2rem; }
+        
+        /* Floating Elements */
+        .floating-btns { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 10px; z-index: 900; }
+        .float-btn { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: var(--accent-luxury); color: var(--primary-bg); text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.3); font-weight: bold; transition: var(--transition); cursor: pointer; }
+        .float-btn:hover { transform: scale(1.1); }
+        #backToTop { display: none; background: var(--bg-light); }
+        
+        .sticky-mobile-cta { display: none; }
+
+        /* Footer */
+        footer { background: #1a251d; border-top: 1px solid rgba(216, 154, 32, 0.2); padding: 4rem 0 2rem; text-align: center; }
+        .footer-logo { font-family: var(--font-head); font-size: 2rem; color: var(--accent-luxury); margin-bottom: 1rem; }
+        .footer-links { display: flex; justify-content: center; gap: 2rem; margin: 2rem 0; flex-wrap: wrap; }
+        .footer-links a { color: var(--bg-light); font-family: var(--font-sub); font-size: 0.85rem; text-transform: uppercase; }
+        .copyright { font-size: 0.8rem; color: #888; margin-top: 2rem; }
+
+        /* Media Queries */
+        @media (max-width: 1024px) {
+            .hero h1 { font-size: 4rem; }
+            .grid-4 { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hamburger { display: flex; }
+            .hero h1 { font-size: 3rem; }
+            .hero-btns { flex-direction: column; }
+            .grid-2 { grid-template-columns: 1fr; }
+            .timeline::before { left: 30px; }
+            .timeline-dot { left: 30px; }
+            .timeline-item, .timeline-item:nth-child(even) { flex-direction: column; align-items: flex-start; padding-left: 70px; }
+            .timeline-content { width: 100%; }
+            .gallery-grid { columns: 2 150px; }
+            
+            .floating-btns { bottom: 80px; } /* Above sticky CTA */
+            
+            /* Mobile Sticky CTA */
+            .sticky-mobile-cta {
+                display: flex; position: fixed; bottom: 0; left: 0; width: 100%;
+                background: var(--accent-luxury); z-index: 1000;
+            }
+            .sticky-mobile-cta a {
+                flex: 1; text-align: center; padding: 15px 0; color: var(--primary-bg);
+                font-family: var(--font-sub); font-weight: 600; font-size: 0.9rem; text-transform: uppercase;
+                border-right: 1px solid rgba(38, 55, 43, 0.2);
+            }
+            .sticky-mobile-cta a:last-child { border-right: none; }
+        }
+        @media (max-width: 430px) {
+            .hero h1 { font-size: 2.5rem; }
+            .section-title { font-size: 2.2rem; }
+            .card { padding: 1.5rem; }
+            .gallery-grid { columns: 1 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="nav-container">
+            <a href="#home" class="logo">MOZAR PALACE</a>
+            <nav class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#weddings">Weddings</a>
+                <a href="#events">Events</a>
+                <a href="#spaces">Spaces</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#packages">Packages</a>
+                <a href="#contact">Contact</a>
+                <a href="#enquiry" class="btn btn-outline" style="padding: 0.5rem 1.5rem;">Enquire Now</a>
+            </nav>
+            <div class="hamburger" onclick="toggleMobileMenu()">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Fullscreen Nav -->
+    <div class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-close" onclick="toggleMobileMenu()">&times;</div>
+        <a href="#home" onclick="toggleMobileMenu()">Home</a>
+        <a href="#about" onclick="toggleMobileMenu()">About</a>
+        <a href="#weddings" onclick="toggleMobileMenu()">Weddings</a>
+        <a href="#events" onclick="toggleMobileMenu()">Events</a>
+        <a href="#spaces" onclick="toggleMobileMenu()">Spaces</a>
+        <a href="#gallery" onclick="toggleMobileMenu()">Gallery</a>
+        <a href="#packages" onclick="toggleMobileMenu()">Packages</a>
+        <a href="#contact" onclick="toggleMobileMenu()">Contact</a>
+        <a href="#enquiry" onclick="toggleMobileMenu()" style="color:var(--bg-light); border:1px solid var(--accent-luxury); padding:10px 30px; border-radius:2px; font-size:1.2rem;">Enquire Now</a>
+    </div>
+
+    <!-- MAIN CONTENT ROUTER -->
+    <main id="main-content">
+
+        <!-- ================= HOME PAGE ================= -->
+        <section id="home" class="page-section">
+            <div class="hero">
+                <div class="hero-content">
+                    <span class="eyebrow">Welcome To</span>
+                    <h1>MOZAR PALACE</h1>
+                    <div class="ornament"></div>
+                    <p>Where Every Celebration Becomes a Royal Memory.<br>An elegant destination for weddings, celebrations and unforgettable occasions.</p>
+                    <div class="hero-btns">
+                        <a href="#enquiry" class="btn btn-primary">Plan Your Event</a>
+                        <a href="#spaces" class="btn btn-outline">Explore The Venue</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container section-light">
+                <div class="grid-2">
+                    <div>
+                        <span class="eyebrow">The Experience</span>
+                        <h2 class="section-title">A Place Made for Grand Moments</h2>
+                        <div class="ornament"></div>
+                        <p style="margin-bottom: 2rem;">Discover Mozar Palace, a premium celebration venue designed to turn your most important days into unforgettable memories. With a blend of royal aesthetics, elegant spaces, and professional hospitality, we provide the perfect canvas for your events.</p>
+                        <a href="#about" class="btn btn-primary">Discover Mozar Palace</a>
+                    </div>
+                    <div class="intro-img">
+                        <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=800&q=80" alt="Mozar Palace Ambience">
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="text-center">
+                    <span class="eyebrow">Celebrations</span>
+                    <h2 class="section-title">Occasions</h2>
+                    <p class="section-subtitle">Tailored spaces and services for every milestone in your life.</p>
+                </div>
+                <div class="grid-3">
+                    <div class="card">
+                        <h3>Weddings</h3>
+                        <p>Celebrate your special day in an elegant setting.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Receptions</h3>
+                        <p>Create an unforgettable celebration for your guests.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Engagements</h3>
+                        <p>A beautiful beginning to a beautiful journey.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Birthday Celebrations</h3>
+                        <p>Make every milestone worth remembering.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Anniversaries</h3>
+                        <p>Celebrate the moments that matter most.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Corporate Events</h3>
+                        <p>A refined setting for professional gatherings and occasions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= ABOUT PAGE ================= -->
+        <section id="about" class="page-section">
+            <div class="hero" style="height: 60vh; background-image: url('https://images.unsplash.com/photo-1545326557-41481e1ec072?auto=format&fit=crop&w=1920&q=80');">
+                <div class="hero-content">
+                    <h1>The Mozar Palace Experience</h1>
+                    <div class="ornament"></div>
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="grid-2">
+                    <div class="intro-img">
+                        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80" alt="Royal Ambience">
+                    </div>
+                    <div>
+                        <span class="eyebrow">Why Mozar Palace</span>
+                        <h2 class="section-title">Royal Ambience & Professional Hospitality</h2>
+                        <p style="margin-bottom: 1.5rem;">At Mozar Palace, we believe that the setting of your celebration is just as important as the occasion itself. Our venue is meticulously designed to offer a blend of traditional elegance and modern luxury.</p>
+                        <ul style="list-style: none; margin-bottom: 2rem;">
+                            <li style="margin-bottom: 10px;">✧ Elegant Spaces</li>
+                            <li style="margin-bottom: 10px;">✧ Royal Ambience</li>
+                            <li style="margin-bottom: 10px;">✧ Beautiful Celebrations</li>
+                            <li style="margin-bottom: 10px;">✧ Memorable Experiences</li>
+                            <li style="margin-bottom: 10px;">✧ Personalized Events</li>
+                        </ul>
+                        <a href="#enquiry" class="btn btn-outline">Enquire Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container section-light" style="padding-top: 5rem; padding-bottom: 5rem; text-align:center;">
+                <h2 class="section-title">Why Choose Us</h2>
+                <div class="grid-4" style="margin-top: 3rem;">
+                    <div class="card" style="border-color: #26372B;">
+                        <h3 style="color: #26372B;">Royal Ambience</h3>
+                        <p style="color: #555;">A sophisticated setting for memorable occasions.</p>
+                    </div>
+                    <div class="card" style="border-color: #26372B;">
+                        <h3 style="color: #26372B;">Elegant Celebrations</h3>
+                        <p style="color: #555;">Designed to make important moments feel special.</p>
+                    </div>
+                    <div class="card" style="border-color: #26372B;">
+                        <h3 style="color: #26372B;">Flexible Events</h3>
+                        <p style="color: #555;">Suitable for different types of celebrations.</p>
+                    </div>
+                    <div class="card" style="border-color: #26372B;">
+                        <h3 style="color: #26372B;">Beautiful Memories</h3>
+                        <p style="color: #555;">Spaces designed for memorable photographs and experiences.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= WEDDINGS PAGE ================= -->
+        <section id="weddings" class="page-section">
+            <div class="wedding-immersive">
+                <div class="container">
+                    <span class="eyebrow" style="color: var(--white);">Exclusive Weddings</span>
+                    <h2>Your Forever Deserves a Grand Beginning</h2>
+                    <div class="ornament"></div>
+                    <p class="section-subtitle" style="font-size: 1.2rem; color: var(--white);">Experience a wedding tailored to perfection, wrapped in the royal elegance of Mozar Palace.</p>
+                    <a href="#enquiry" class="btn btn-primary">Plan Your Wedding</a>
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="grid-3">
+                    <div class="card">
+                        <h3>Wedding Ceremony</h3>
+                        <p>Sacred spaces designed for beautiful rituals.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Reception</h3>
+                        <p>Grand halls for hosting your extended family and friends.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Stage Decoration</h3>
+                        <p>Customizable regal setups for the perfect backdrop.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Couple Portraits</h3>
+                        <p>Picturesque locations within the venue for your memories.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Guest Celebrations</h3>
+                        <p>Comfortable, elegant areas for guests to mingle and celebrate.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Dining & Evening</h3>
+                        <p>Exceptional catering spaces and evening event setups.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Event Journey -->
+            <div class="container section-light" style="padding: 5rem 2rem; border-radius: 4px;">
+                <div class="text-center">
+                    <h2 class="section-title">The Event Journey</h2>
+                    <p class="section-subtitle" style="color: #555;">How we bring your dream celebration to life.</p>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-num">01</span>
+                            <h3 style="color: var(--primary-bg);">Enquire</h3>
+                            <p style="color: #555;">Tell us about your event, date, and guest count.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-num">02</span>
+                            <h3 style="color: var(--primary-bg);">Visit</h3>
+                            <p style="color: #555;">Explore the venue and experience the ambience.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-num">03</span>
+                            <h3 style="color: var(--primary-bg);">Plan</h3>
+                            <p style="color: #555;">Discuss your event requirements and finalize spaces.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-num">04</span>
+                            <h3 style="color: var(--primary-bg);">Celebrate</h3>
+                            <p style="color: #555;">Bring your occasion to life flawlessly.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-num">05</span>
+                            <h3 style="color: var(--primary-bg);">Remember</h3>
+                            <p style="color: #555;">Create memories that last a lifetime.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= EVENTS PAGE ================= -->
+        <section id="events" class="page-section">
+            <div class="hero" style="height: 50vh; background-image: url('https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=1920&q=80');">
+                <div class="hero-content">
+                    <h1>Other Celebrations</h1>
+                    <div class="ornament"></div>
+                </div>
+            </div>
+            <div class="container">
+                <p class="text-center" style="max-width: 700px; margin: 0 auto 3rem; font-size: 1.1rem;">Beyond weddings, Mozar Palace is the perfect setting for corporate gatherings, milestone birthdays, and private parties requiring a touch of elegance.</p>
+                <div class="grid-2">
+                    <img src="https://images.unsplash.com/photo-1511556532299-8f662fc26c06?auto=format&fit=crop&w=800&q=80" alt="Corporate Event" style="border-radius:4px;">
+                    <div>
+                        <h2>Corporate & Professional</h2>
+                        <p style="margin-bottom: 2rem;">A refined setting for professional gatherings, award ceremonies, and corporate galas. Impress your clients and reward your team in a venue that speaks of prestige.</p>
+                        <a href="#enquiry" class="btn btn-outline">Enquire Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= SPACES PAGE ================= -->
+        <section id="spaces" class="page-section">
+            <div class="container">
+                <div class="text-center">
+                    <span class="eyebrow">Our Venues</span>
+                    <h2 class="section-title">Event Spaces</h2>
+                    <p class="section-subtitle">Discover the perfect canvas for your celebration.</p>
+                </div>
+                
+                <div class="grid-2">
+                    <!-- Space 1 -->
+                    <div class="space-card">
+                        <img src="https://images.unsplash.com/photo-1519167758481-83f540f28b07?auto=format&fit=crop&w=800&q=80" alt="Venue" class="space-img">
+                        <div class="space-details">
+                            <h3>[Insert Grand Hall Name]</h3>
+                            <div class="space-meta">
+                                <span>Capacity: [XX] Guests</span>
+                                <span>[Indoor / Outdoor]</span>
+                            </div>
+                            <p style="margin-bottom: 1.5rem; font-size: 0.9rem; color: #ccc;">A majestic space featuring royal architecture and premium lighting, perfect for grand weddings and large receptions.</p>
+                            <a href="#enquiry" class="btn btn-outline" style="width:100%; text-align:center;">Enquire</a>
+                        </div>
+                    </div>
+                    <!-- Space 2 -->
+                    <div class="space-card">
+                        <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=800&q=80" alt="Venue" class="space-img">
+                        <div class="space-details">
+                            <h3>[Insert Lawn/Garden Name]</h3>
+                            <div class="space-meta">
+                                <span>Capacity: [XX] Guests</span>
+                                <span>[Indoor / Outdoor]</span>
+                            </div>
+                            <p style="margin-bottom: 1.5rem; font-size: 0.9rem; color: #ccc;">An open-air elegant setting surrounded by lush greenery, ideal for evening parties and winter celebrations.</p>
+                            <a href="#enquiry" class="btn btn-outline" style="width:100%; text-align:center;">Enquire</a>
+                        </div>
+                    </div>
+                    <!-- Space 3 -->
+                    <div class="space-card">
+                        <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80" alt="Venue" class="space-img">
+                        <div class="space-details">
+                            <h3>[Insert Banquet Name]</h3>
+                            <div class="space-meta">
+                                <span>Capacity: [XX] Guests</span>
+                                <span>[Indoor / Outdoor]</span>
+                            </div>
+                            <p style="margin-bottom: 1.5rem; font-size: 0.9rem; color: #ccc;">A sophisticated banquet hall tailored for intimate gatherings, corporate events, and pre-wedding functions.</p>
+                            <a href="#enquiry" class="btn btn-outline" style="width:100%; text-align:center;">Enquire</a>
+                        </div>
+                    </div>
+                    <!-- Space 4 -->
+                    <div class="space-card">
+                        <img src="https://images.unsplash.com/photo-1530103862676-de8892bf309c?auto=format&fit=crop&w=800&q=80" alt="Venue" class="space-img">
+                        <div class="space-details">
+                            <h3>[Insert Dining Area Name]</h3>
+                            <div class="space-meta">
+                                <span>Capacity: [XX] Guests</span>
+                                <span>[Indoor / Outdoor]</span>
+                            </div>
+                            <p style="margin-bottom: 1.5rem; font-size: 0.9rem; color: #ccc;">A dedicated dining space offering a royal feast experience with impeccable service and ambience.</p>
+                            <a href="#enquiry" class="btn btn-outline" style="width:100%; text-align:center;">Enquire</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= GALLERY PAGE ================= -->
+        <section id="gallery" class="page-section">
+            <div class="container">
+                <div class="text-center">
+                    <span class="eyebrow">Visuals</span>
+                    <h2 class="section-title">The Gallery</h2>
+                    <div class="ornament"></div>
+                </div>
+                
+                <div class="gallery-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="weddings">Weddings</button>
+                    <button class="filter-btn" data-filter="decorations">Decorations</button>
+                    <button class="filter-btn" data-filter="venue">Venue</button>
+                    <button class="filter-btn" data-filter="events">Events</button>
+                </div>
+                
+                <div class="gallery-grid" id="galleryGrid">
+                    <!-- Gallery Items -->
+                    <div class="gallery-item" data-category="weddings" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=600&q=80" alt="Wedding">
+                        <div class="gallery-overlay"><i>View</i></div>
+                    </div>
+                    <div class="gallery-item" data-category="venue" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=600&q=80" alt="Venue">
+                        <div class="gallery-overlay"><i>View</i></div>
+                    </div>
+                    <div class="gallery-item" data-category="decorations" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=600&q=80" alt="Decoration">
+                        <div class="gallery-overlay"><i>View</i></div>
+                    </div>
+                    <div class="gallery-item" data-category="events" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1511556532299-8f662fc26c06?auto=format&fit=crop&w=600&q=80" alt="Event">
+                        <div class="gallery-overlay"><i>View</i></div>
+                    </div>
+                    <div class="gallery-item" data-category="weddings" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1530103862676-de8892bf309c?auto=format&fit=crop&w=600&q=80" alt="Wedding Dining">
+                        <div class="gallery-overlay"><i>View</i></div>
+                    </div>
+                    <div class="gallery-item" data-category="decorations" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=600&q=80" alt="Outdoor Decor">
+                        <div class="gallery-overlay"><i>View</i></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= PACKAGES PAGE ================= -->
+        <section id="packages" class="page-section">
+            <div class="container">
+                <div class="text-center">
+                    <span class="eyebrow">Offerings</span>
+                    <h2 class="section-title">Event Packages</h2>
+                    <p class="section-subtitle">Curated experiences for your special day.</p>
+                    <div class="ornament"></div>
+                </div>
+                
+                <div class="grid-4" style="margin-top: 3rem;">
+                    <div class="card">
+                        <h3>Wedding Package</h3>
+                        <p style="font-family: var(--font-sub); color: var(--accent-luxury); font-size: 1.2rem; margin: 1rem 0;">Starting From ₹_____</p>
+                        <hr style="border-color: rgba(255,255,255,0.1); margin: 1.5rem 0;">
+                        <p style="font-size: 0.9rem;">Comprehensive venue and service package tailored for traditional and modern weddings.</p>
+                        <a href="#enquiry" class="btn btn-outline" style="margin-top: 1.5rem; width: 100%; padding: 0.8rem;">Enquire</a>
+                    </div>
+                    <div class="card">
+                        <h3>Reception Package</h3>
+                        <p style="font-family: var(--font-sub); color: var(--accent-luxury); font-size: 1.2rem; margin: 1rem 0;">Starting From ₹_____</p>
+                        <hr style="border-color: rgba(255,255,255,0.1); margin: 1.5rem 0;">
+                        <p style="font-size: 0.9rem;">Elegant setup and dining arrangements for grand post-wedding celebrations.</p>
+                        <a href="#enquiry" class="btn btn-outline" style="margin-top: 1.5rem; width: 100%; padding: 0.8rem;">Enquire</a>
+                    </div>
+                    <div class="card">
+                        <h3>Celebration Package</h3>
+                        <p style="font-family: var(--font-sub); color: var(--accent-luxury); font-size: 1.2rem; margin: 1rem 0;">Starting From ₹_____</p>
+                        <hr style="border-color: rgba(255,255,255,0.1); margin: 1.5rem 0;">
+                        <p style="font-size: 0.9rem;">Perfect for milestone birthdays, anniversaries, and engagement ceremonies.</p>
+                        <a href="#enquiry" class="btn btn-outline" style="margin-top: 1.5rem; width: 100%; padding: 0.8rem;">Enquire</a>
+                    </div>
+                    <div class="card">
+                        <h3>Corporate Package</h3>
+                        <p style="font-family: var(--font-sub); color: var(--accent-luxury); font-size: 1.2rem; margin: 1rem 0;">Starting From ₹_____</p>
+                        <hr style="border-color: rgba(255,255,255,0.1); margin: 1.5rem 0;">
+                        <p style="font-size: 0.9rem;">Professional setups, corporate dining, and high-end service for business events.</p>
+                        <a href="#enquiry" class="btn btn-outline" style="margin-top: 1.5rem; width: 100%; padding: 0.8rem;">Enquire</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= CONTACT PAGE ================= -->
+        <section id="contact" class="page-section">
+            <div class="container">
+                <div class="text-center">
+                    <span class="eyebrow">Get In Touch</span>
+                    <h2 class="section-title">Contact & Location</h2>
+                    <div class="ornament"></div>
+                </div>
+                
+                <div class="grid-2">
+                    <!-- Info -->
+                    <div>
+                        <h3 style="font-size: 2rem; margin-bottom: 2rem;">Visit Mozar Palace</h3>
+                        <p style="margin-bottom: 1rem;"><strong style="color:var(--accent-luxury);">Address:</strong> <br><span id="conf-address">[Insert Address], [Insert City], [Insert State]</span></p>
+                        <p style="margin-bottom: 1rem;"><strong style="color:var(--accent-luxury);">Phone:</strong> <br><span id="conf-phone">[Insert Phone]</span></p>
+                        <p style="margin-bottom: 1rem;"><strong style="color:var(--accent-luxury);">WhatsApp:</strong> <br><span id="conf-whatsapp">[Insert WhatsApp]</span></p>
+                        <p style="margin-bottom: 1rem;"><strong style="color:var(--accent-luxury);">Email:</strong> <br><span id="conf-email">[Insert Email]</span></p>
+                        <p style="margin-bottom: 2rem;"><strong style="color:var(--accent-luxury);">Hours:</strong> <br><span id="conf-hours">[Insert Opening Hours]</span></p>
+                        
+                        <div style="display:flex; gap:1rem;">
+                            <a href="#" id="conf-mapbtn" target="_blank" class="btn btn-primary">Get Directions</a>
+                            <a href="#enquiry" class="btn btn-outline">Plan Your Event</a>
+                        </div>
+                    </div>
+                    <!-- Map Placeholder -->
+                    <div style="height: 400px; background: #1a251d; border: 1px solid var(--accent-luxury); display:flex; align-items:center; justify-content:center; text-align:center; padding:2rem;">
+                        <div>
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#D89A20" stroke-width="2" style="margin-bottom:1rem;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            <h4 style="margin:0;">Google Maps Integration</h4>
+                            <p style="font-size: 0.8rem; color:#888;">Replace this box with actual iframe embed code from Google Maps when location is confirmed.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Testimonials inside Contact/Home -->
+            <div class="container section-light" style="margin-top: 3rem;">
+                <h2 class="section-title text-center">Guest Experiences</h2>
+                <div class="ornament"></div>
+                <div class="testimonial-slider" id="testimonialSlider">
+                    <div class="testimonial-slide active">
+                        <p class="testimonial-text">"[Insert a beautiful placeholder testimonial here about the wonderful wedding experience.]"</p>
+                        <span class="testimonial-author">- [Guest Name]</span>
+                    </div>
+                    <div class="testimonial-slide">
+                        <p class="testimonial-text">"[Insert a placeholder testimonial regarding the excellent corporate event management.]"</p>
+                        <span class="testimonial-author">- [Client Name]</span>
+                    </div>
+                    <div class="testimonial-slide">
+                        <p class="testimonial-text">"[Insert a placeholder testimonial regarding the royal ambience and decor.]"</p>
+                        <span class="testimonial-author">- [Guest Name]</span>
+                    </div>
+                </div>
+                <div class="slider-controls" id="sliderControls"></div>
+            </div>
+        </section>
+
+
+        <!-- ================= ENQUIRY PAGE / FORM ================= -->
+        <section id="enquiry" class="page-section">
+            <div class="container" style="max-width: 700px;">
+                <div class="text-center">
+                    <h2 class="section-title">Let's Plan Something Beautiful</h2>
+                    <p class="section-subtitle">Fill out the form below and our event specialists will get back to you shortly.</p>
+                    <div class="ornament"></div>
+                </div>
+                
+                <form id="enquiryForm" onsubmit="handleFormSubmit(event)" style="background: rgba(255,255,255,0.02); padding: 3rem; border: 1px solid rgba(216, 154, 32, 0.2); border-radius: 4px;">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="name" placeholder="Full Name *" required>
+                    </div>
+                    <div class="grid-2" style="gap: 1.5rem; margin-bottom: 0;">
+                        <div class="form-group">
+                            <input type="tel" class="form-control" id="phone" placeholder="Phone Number *" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="email" placeholder="Email Address *" required>
+                        </div>
+                    </div>
+                    <div class="grid-2" style="gap: 1.5rem; margin-bottom: 0;">
+                        <div class="form-group">
+                            <select class="form-control" id="eventType" required>
+                                <option value="" disabled selected>Select Event Type *</option>
+                                <option value="Wedding">Wedding</option>
+                                <option value="Reception">Reception</option>
+                                <option value="Corporate">Corporate Event</option>
+                                <option value="Birthday">Birthday</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="date" class="form-control" id="eventDate" required style="color: rgba(255,255,255,0.5);" onchange="this.style.color='white'">
+                        </div>
+                    </div>
+                    <div class="grid-2" style="gap: 1.5rem; margin-bottom: 0;">
+                        <div class="form-group">
+                            <input type="number" class="form-control" id="guests" placeholder="Estimated Number of Guests *" required>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" id="venuePref">
+                                <option value="" disabled selected>Preferred Venue Space</option>
+                                <option value="Grand Hall">[Insert Grand Hall Name]</option>
+                                <option value="Lawn">[Insert Lawn Name]</option>
+                                <option value="Banquet">[Insert Banquet Name]</option>
+                                <option value="Not Sure">Not Sure Yet</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" id="message" rows="4" placeholder="Additional Details / Message"></textarea>
+                    </div>
+                    <div style="text-align: center; margin-top: 2rem;">
+                        <button type="submit" class="btn btn-primary" style="width: 100%; max-width: 300px; margin-bottom: 1rem;">Send Enquiry</button>
+                        <br>
+                        <a href="#contact" class="btn btn-outline" style="width: 100%; max-width: 300px; border:none; border-bottom: 1px solid var(--accent-luxury);">Schedule a Venue Visit</a>
+                    </div>
+                </form>
+                
+                <div class="form-success" id="formSuccess">
+                    <h3 style="color: var(--accent-luxury); font-size: 2rem; margin-bottom: 1rem;">Thank You!</h3>
+                    <p>Your enquiry has been received. Our team will contact you shortly to discuss your beautiful event.</p>
+                    <button class="btn btn-outline" onclick="resetForm()" style="margin-top: 2rem;">Send Another Enquiry</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container" style="padding: 0;">
+            <div class="footer-logo">MOZAR PALACE</div>
+            <p style="max-width: 400px; margin: 0 auto; color: #888; font-size: 0.9rem;">Where Every Celebration Becomes a Royal Memory.</p>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#weddings">Weddings</a>
+                <a href="#spaces">Spaces</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="copyright">
+                &copy; <span id="year"></span> Mozar Palace. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Elements -->
+    <div class="floating-btns">
+        <a href="https://wa.me/910000000000" target="_blank" class="float-btn" id="waBtn" title="WhatsApp Us">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12.01 2.014c-5.495 0-9.974 4.473-9.974 9.97 0 1.764.457 3.482 1.326 5.002L2 22l5.17-1.343a9.922 9.922 0 0 0 4.84 1.258h.004c5.494 0 9.973-4.474 9.973-9.972 0-5.496-4.48-9.97-9.977-9.97z"></path></svg>
+        </a>
+        <a href="tel:+910000000000" class="float-btn" id="callBtn" title="Call Us">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        </a>
+        <div class="float-btn" id="backToTop" onclick="window.scrollTo(0,0)" title="Back to Top">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+        </div>
+    </div>
+
+    <!-- Mobile Sticky CTA -->
+    <div class="sticky-mobile-cta">
+        <a href="tel:+910000000000" id="mobCall">Call</a>
+        <a href="https://wa.me/910000000000" id="mobWa">WhatsApp</a>
+        <a href="#enquiry" style="background:var(--primary-bg); color:var(--accent-luxury);">Enquire</a>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+        <div class="lightbox-close">&times;</div>
+        <img src="" id="lightboxImg" alt="Gallery View">
+    </div>
+
+    <script>
+        // --- CONFIGURATION OBJECT ---
+        const businessInfo = {
+            phone: "+91-0000000000",
+            whatsapp: "910000000000", // no '+' for wa.me link
+            email: "events@mozarpalace.com",
+            address: "[Insert Street Address]",
+            city: "[Insert City]",
+            state: "[Insert State]",
+            hours: "Mon - Sun, 9:00 AM - 9:00 PM",
+            mapUrl: "https://maps.google.com" // Placeholder
+        };
+
+        // Populate placeholders
+        document.getElementById('conf-phone').innerText = businessInfo.phone;
+        document.getElementById('conf-whatsapp').innerText = "+" + businessInfo.whatsapp;
+        document.getElementById('conf-email').innerText = businessInfo.email;
+        document.getElementById('conf-address').innerText = `${businessInfo.address}, ${businessInfo.city}, ${businessInfo.state}`;
+        document.getElementById('conf-hours').innerText = businessInfo.hours;
+        document.getElementById('conf-mapbtn').href = businessInfo.mapUrl;
+        
+        document.getElementById('waBtn').href = `https://wa.me/${businessInfo.whatsapp}`;
+        document.getElementById('callBtn').href = `tel:${businessInfo.phone}`;
+        document.getElementById('mobCall').href = `tel:${businessInfo.phone}`;
+        document.getElementById('mobWa').href = `https://wa.me/${businessInfo.whatsapp}`;
+        
+        document.getElementById('year').innerText = new Date().getFullYear();
+
+        // --- SPA ROUTING ---
+        function handleRoute() {
+            let hash = window.location.hash;
+            if (!hash) hash = '#home';
+            
+            // Hide all sections
+            document.querySelectorAll('.page-section').forEach(sec => sec.classList.remove('active'));
+            
+            // Show target section
+            const targetSection = document.querySelector(hash);
+            if (targetSection) {
+                targetSection.classList.add('active');
+                window.scrollTo(0, 0);
+            } else {
+                document.querySelector('#home').classList.add('active');
+                window.history.replaceState(null, null, '#home');
+            }
+            
+            // Update active nav links
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === hash) link.classList.add('active');
+            });
+        }
+        
+        window.addEventListener('hashchange', handleRoute);
+        window.addEventListener('load', handleRoute);
+
+        // --- UI INTERACTIONS ---
+        
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            document.getElementById('mobileNav').classList.toggle('active');
+        }
+
+        // Header Scroll & Back to top
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            const btt = document.getElementById('backToTop');
+            if (window.scrollY > 50) {
+                header.style.background = 'rgba(21, 26, 23, 0.98)';
+                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.5)';
+                btt.style.display = 'flex';
+            } else {
+                header.style.background = 'rgba(38, 55, 43, 0.95)';
+                header.style.boxShadow = 'none';
+                btt.style.display = 'none';
+            }
+        });
+
+        // Gallery Filtering
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Active class
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                const filterValue = btn.getAttribute('data-filter');
+                
+                galleryItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Lightbox
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        
+        function openLightbox(element) {
+            const imgSrc = element.querySelector('img').src;
+            lightboxImg.src = imgSrc;
+            lightbox.classList.add('active');
+        }
+        
+        function closeLightbox(e) {
+            if (e.target === lightbox || e.target.classList.contains('lightbox-close')) {
+                lightbox.classList.remove('active');
+            }
+        }
+
+        // Testimonial Slider
+        const slides = document.querySelectorAll('.testimonial-slide');
+        const controlsContainer = document.getElementById('sliderControls');
+        let currentSlide = 0;
+        
+        // Create dots
+        slides.forEach((_, i) => {
+            const dot = document.createElement('div');
+            dot.classList.add('slider-dot');
+            if (i === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(i));
+            controlsContainer.appendChild(dot);
+        });
+        const dots = document.querySelectorAll('.slider-dot');
+        
+        function goToSlide(index) {
+            slides[currentSlide].classList.remove('active');
+            dots[currentSlide].classList.remove('active');
+            currentSlide = index;
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+        }
+        
+        setInterval(() => {
+            let next = (currentSlide + 1) % slides.length;
+            goToSlide(next);
+        }, 5000);
+
+        // Form Handling
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            // Simulate form submission
+            document.getElementById('enquiryForm').style.display = 'none';
+            document.getElementById('formSuccess').style.display = 'block';
+        }
+        
+        function resetForm() {
+            document.getElementById('enquiryForm').reset();
+            document.getElementById('enquiryForm').style.display = 'block';
+            document.getElementById('formSuccess').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
