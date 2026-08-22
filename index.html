@@ -910,7 +910,7 @@
       }
 
       /* Timeline */
-      .timeline {
+      /* .timeline {
         position: relative;
         max-width: 800px;
         margin: 0 auto;
@@ -959,6 +959,250 @@
         opacity: 0.5;
         margin-bottom: 0.5rem;
         display: block;
+      } */
+
+      /* =========================================
+   EVENT JOURNEY
+========================================= */
+
+      .event-journey-section {
+        background: #f7f3e8;
+        color: #263b2d;
+        padding: 100px 0;
+      }
+
+      .event-journey-heading {
+        max-width: 760px;
+        margin: 0 auto 65px;
+      }
+
+      .event-journey-heading .eyebrow {
+        color: #b88718;
+      }
+
+      .event-journey-heading .section-title {
+        color: #263b2d;
+        margin-top: 12px;
+      }
+
+      .event-journey-heading .section-subtitle {
+        color: #626a63;
+        max-width: 650px;
+        margin: 15px auto 0;
+      }
+
+      /* Timeline */
+
+      .event-journey {
+        position: relative;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 10px 0;
+      }
+
+      /* Center line */
+
+      .event-journey::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 1px;
+        background: rgba(184, 135, 24, 0.45);
+        transform: translateX(-50%);
+      }
+
+      /* Individual step */
+
+      .journey-step {
+        position: relative;
+        display: flex;
+        width: 50%;
+        margin-bottom: 55px;
+      }
+
+      /* Alternate sides */
+
+      .journey-step:nth-child(odd) {
+        margin-left: 0;
+        padding-right: 55px;
+        justify-content: flex-end;
+      }
+
+      .journey-step:nth-child(even) {
+        margin-left: 50%;
+        padding-left: 55px;
+      }
+
+      /* Number */
+
+      .journey-number {
+        position: absolute;
+        top: 25px;
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        background: #b88718;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--font-sub);
+        font-size: 1rem;
+        font-weight: 700;
+        z-index: 2;
+        box-shadow: 0 0 0 7px #f7f3e8;
+      }
+
+      .journey-step:nth-child(odd) .journey-number {
+        right: -26px;
+      }
+
+      .journey-step:nth-child(even) .journey-number {
+        left: -26px;
+      }
+
+      /* Content card */
+
+      .journey-content {
+        width: 100%;
+        max-width: 380px;
+        background: #fff;
+        border: 1px solid rgba(38, 59, 45, 0.12);
+        padding: 28px 30px;
+        border-radius: 4px;
+        box-shadow: 0 12px 30px rgba(38, 59, 45, 0.08);
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+
+      .journey-content:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 18px 35px rgba(38, 59, 45, 0.12);
+      }
+
+      /* Small label */
+
+      .journey-label {
+        display: block;
+        color: #b88718;
+        font-size: 0.72rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        margin-bottom: 8px;
+      }
+
+      /* Heading */
+
+      .journey-content h3 {
+        color: #263b2d;
+        font-family: var(--font-heading);
+        font-size: 1.45rem;
+        margin-bottom: 10px;
+      }
+
+      /* Description */
+
+      .journey-content p {
+        color: #626a63;
+        font-size: 0.92rem;
+        line-height: 1.7;
+        margin: 0;
+      }
+
+      /* =========================================
+   TABLET
+========================================= */
+
+      @media (max-width: 768px) {
+        .event-journey-section {
+          padding: 75px 20px;
+        }
+
+        .event-journey-heading {
+          margin-bottom: 45px;
+        }
+
+        .event-journey {
+          padding-left: 30px;
+        }
+
+        .event-journey::before {
+          left: 5px;
+          transform: none;
+        }
+
+        .journey-step,
+        .journey-step:nth-child(odd),
+        .journey-step:nth-child(even) {
+          width: 100%;
+          margin-left: 0;
+          padding-left: 40px;
+          padding-right: 0;
+          justify-content: flex-start;
+          margin-bottom: 30px;
+        }
+
+        .journey-step:nth-child(odd) .journey-number,
+        .journey-step:nth-child(even) .journey-number {
+          left: -21px;
+          right: auto;
+        }
+
+        .journey-content {
+          max-width: none;
+        }
+      }
+
+      /* =========================================
+   MOBILE
+========================================= */
+
+      @media (max-width: 480px) {
+        .event-journey-section {
+          padding: 60px 18px;
+        }
+
+        .event-journey {
+          padding-left: 24px;
+        }
+
+        .event-journey::before {
+          left: 3px;
+        }
+
+        .journey-step,
+        .journey-step:nth-child(odd),
+        .journey-step:nth-child(even) {
+          padding-left: 30px;
+          margin-bottom: 25px;
+        }
+
+        .journey-number {
+          width: 44px;
+          height: 44px;
+          font-size: 0.85rem;
+        }
+
+        .journey-step:nth-child(odd) .journey-number,
+        .journey-step:nth-child(even) .journey-number {
+          left: -19px;
+        }
+
+        .journey-content {
+          padding: 22px;
+        }
+
+        .journey-content h3 {
+          font-size: 1.25rem;
+        }
+
+        .journey-content p {
+          font-size: 0.88rem;
+        }
       }
 
       /* Testimonials */
@@ -3214,6 +3458,231 @@
           height: 300px;
         }
       }
+
+      /* =========================
+   WEDDING GALLERY
+========================= */
+
+      .wedding-gallery-section {
+        background: #f7f3e8;
+        padding: 100px 0;
+        color: #263b2d;
+      }
+
+      .wedding-gallery-heading {
+        max-width: 760px;
+        margin: 0 auto 55px;
+      }
+
+      .wedding-gallery-heading .eyebrow {
+        color: #b88718;
+      }
+
+      .wedding-gallery-heading .section-title {
+        color: #263b2d;
+        margin-top: 12px;
+      }
+
+      .wedding-gallery-heading .section-subtitle {
+        color: #5d675f;
+        max-width: 650px;
+        margin: 15px auto 0;
+      }
+
+      .wedding-gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 240px;
+        gap: 18px;
+      }
+
+      .wedding-gallery-item {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        border-radius: 4px;
+        background: #ddd;
+        box-shadow: 0 12px 30px rgba(24, 43, 31, 0.12);
+      }
+
+      .wedding-gallery-item img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        transition: transform 0.6s ease;
+      }
+
+      .wedding-gallery-item::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to top,
+          rgba(20, 35, 26, 0.35),
+          transparent 55%
+        );
+        opacity: 0;
+        transition: opacity 0.4s ease;
+      }
+
+      .wedding-gallery-item:hover img {
+        transform: scale(1.06);
+      }
+
+      .wedding-gallery-item:hover::after {
+        opacity: 1;
+      }
+
+      .wedding-gallery-large {
+        grid-row: span 2;
+      }
+
+      .wedding-gallery-button {
+        text-align: center;
+        margin-top: 45px;
+      }
+
+      .wedding-gallery-button .btn {
+        color: #263b2d;
+        border-color: #b88718;
+      }
+
+      .wedding-gallery-button .btn:hover {
+        background: #263b2d;
+        color: #fff;
+        border-color: #263b2d;
+      }
+
+      /* Tablet */
+      @media (max-width: 900px) {
+        .wedding-gallery-section {
+          padding: 75px 0;
+        }
+
+        .wedding-gallery-grid {
+          grid-template-columns: repeat(2, 1fr);
+          grid-auto-rows: 220px;
+        }
+
+        .wedding-gallery-large {
+          grid-row: span 2;
+        }
+      }
+
+      /* Mobile */
+      @media (max-width: 600px) {
+        .wedding-gallery-section {
+          padding: 65px 20px;
+        }
+
+        .wedding-gallery-heading {
+          margin-bottom: 35px;
+        }
+
+        .wedding-gallery-grid {
+          grid-template-columns: 1fr;
+          grid-auto-rows: 230px;
+          gap: 14px;
+        }
+
+        .wedding-gallery-large {
+          grid-row: span 1;
+        }
+
+        .wedding-gallery-item {
+          border-radius: 8px;
+        }
+
+        .wedding-gallery-button {
+          margin-top: 30px;
+        }
+      }
+
+      /* =========================================
+            WHY CHOOSE US
+        ========================================= */
+
+      .why-choose-section {
+        background: #f7f3e8;
+      }
+
+      .why-choose-section .section-title {
+        color: #b88718;
+      }
+
+      .why-choose-grid {
+        align-items: stretch;
+      }
+
+      .why-choose-card {
+        background: #ffffff;
+        border: 1px solid rgba(38, 55, 43, 0.15) !important;
+        border-radius: 6px;
+        padding: 35px 28px;
+        min-height: 200px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        box-shadow: 0 8px 25px rgba(38, 55, 43, 0.08);
+
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease,
+          border-color 0.3s ease;
+      }
+
+      .why-choose-card:hover {
+        transform: translateY(-6px);
+        border-color: #b88718 !important;
+        box-shadow: 0 16px 35px rgba(38, 55, 43, 0.14);
+      }
+
+      .why-choose-card h3 {
+        color: #26372b !important;
+        font-family: var(--font-heading);
+        font-size: 1.3rem;
+        line-height: 1.3;
+        margin-bottom: 12px;
+      }
+
+      .why-choose-card p {
+        color: #555 !important;
+        font-size: 0.92rem;
+        line-height: 1.65;
+        max-width: 220px;
+        margin: 0 auto;
+      }
+
+      /* Tablet */
+
+      @media (max-width: 900px) {
+        .why-choose-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      /* Mobile */
+
+      @media (max-width: 600px) {
+        .why-choose-section {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+
+        .why-choose-grid {
+          grid-template-columns: 1fr;
+          gap: 18px;
+        }
+
+        .why-choose-card {
+          min-height: 170px;
+          padding: 30px 24px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -3771,7 +4240,7 @@
           </div>
         </div>
 
-        <div
+        <!-- <div
           class="container section-light"
           style="padding-top: 5rem; padding-bottom: 5rem; text-align: center"
         >
@@ -3802,7 +4271,37 @@
               </p>
             </div>
           </div>
+        </div> -->
+        <section class="why-choose-section">
+        <div
+          class="container section-light"
+          style="padding-top: 5rem; padding-bottom: 5rem; text-align: center"
+        >
+          <h2 class="section-title">Why Choose Us</h2>
+
+          <div class="grid-4 why-choose-grid" style="margin-top: 3rem">
+            <div class="card why-choose-card">
+              <h3>Royal Ambience</h3>
+              <p>A sophisticated setting for memorable occasions.</p>
+            </div>
+
+            <div class="card why-choose-card">
+              <h3>Elegant Celebrations</h3>
+              <p>Designed to make important moments feel special.</p>
+            </div>
+
+            <div class="card why-choose-card">
+              <h3>Flexible Events</h3>
+              <p>Suitable for different types of celebrations.</p>
+            </div>
+
+            <div class="card why-choose-card">
+              <h3>Beautiful Memories</h3>
+              <p>Spaces designed for memorable photographs and experiences.</p>
+            </div>
+          </div>
         </div>
+        </section>
       </section>
 
       <!-- ================= WEDDINGS PAGE ================= -->
@@ -3857,67 +4356,170 @@
         </div>
 
         <!-- Event Journey -->
-        <div
-          class="container section-light"
-          style="padding: 5rem 2rem; border-radius: 4px"
-        >
-          <div class="text-center">
-            <h2 class="section-title">The Event Journey</h2>
-            <p class="section-subtitle" style="color: #555">
-              How we bring your dream celebration to life.
-            </p>
+        <section class="event-journey-section">
+          <div class="container">
+            <div class="text-center event-journey-heading">
+              <span class="eyebrow">YOUR CELEBRATION</span>
+
+              <h2 class="section-title">The Event Journey</h2>
+
+              <p class="section-subtitle">
+                From the first conversation to your special day, we make every
+                moment simple, elegant, and memorable.
+              </p>
+
+              <div class="ornament"></div>
+            </div>
+
+            <div class="event-journey">
+              <div class="journey-step">
+                <div class="journey-number">01</div>
+
+                <div class="journey-content">
+                  <span class="journey-label">Step One</span>
+                  <h3>Enquire</h3>
+                  <p>
+                    Tell us about your wedding date, celebration plans, guest
+                    count, and your vision for the occasion.
+                  </p>
+                </div>
+              </div>
+
+              <div class="journey-step">
+                <div class="journey-number">02</div>
+
+                <div class="journey-content">
+                  <span class="journey-label">Step Two</span>
+                  <h3>Visit</h3>
+                  <p>
+                    Explore Mozar Palace, discover our spaces, and experience
+                    the ambience before planning your event.
+                  </p>
+                </div>
+              </div>
+
+              <div class="journey-step">
+                <div class="journey-number">03</div>
+
+                <div class="journey-content">
+                  <span class="journey-label">Step Three</span>
+                  <h3>Plan</h3>
+                  <p>
+                    Discuss your requirements, select the right arrangements,
+                    and personalize the celebration to suit your occasion.
+                  </p>
+                </div>
+              </div>
+
+              <div class="journey-step">
+                <div class="journey-number">04</div>
+
+                <div class="journey-content">
+                  <span class="journey-label">Step Four</span>
+                  <h3>Celebrate</h3>
+                  <p>
+                    Relax and enjoy your special day while our team takes care
+                    of the details and delivers a seamless experience.
+                  </p>
+                </div>
+              </div>
+
+              <div class="journey-step">
+                <div class="journey-number">05</div>
+
+                <div class="journey-content">
+                  <span class="journey-label">Step Five</span>
+                  <h3>Remember</h3>
+                  <p>
+                    Create beautiful memories with your loved ones that stay
+                    with you long after the celebration is over.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="timeline">
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <span class="timeline-num">01</span>
-                <h3 style="color: var(--primary-bg)">Enquire</h3>
-                <p style="color: #555">
-                  Tell us about your event, date, and guest count.
-                </p>
-              </div>
+        </section>
+
+        <!-- Wedding Gallery Section -->
+        <section class="wedding-gallery-section">
+          <div class="container">
+            <div class="text-center wedding-gallery-heading">
+              <span class="eyebrow">OUR WEDDINGS</span>
+              <h2 class="section-title">Moments to Remember</h2>
+              <p class="section-subtitle">
+                A glimpse of the beautiful celebrations and unforgettable
+                moments hosted at Mozar Palace.
+              </p>
+              <div class="ornament"></div>
             </div>
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <span class="timeline-num">02</span>
-                <h3 style="color: var(--primary-bg)">Visit</h3>
-                <p style="color: #555">
-                  Explore the venue and experience the ambience.
-                </p>
-              </div>
+
+            <div class="wedding-gallery-grid">
+              <a
+                href="./images/gallery/wedding-1.jpeg"
+                class="wedding-gallery-item"
+              >
+                <img
+                  src="./images/gallery/wedding-1.jpeg"
+                  alt="Wedding celebration at Mozar Palace"
+                />
+              </a>
+
+              <a
+                href="./images/gallery/wedding-2.jpeg"
+                class="wedding-gallery-item"
+              >
+                <img
+                  src="./images/gallery/wedding-2.jpeg"
+                  alt="Wedding decoration at Mozar Palace"
+                />
+              </a>
+
+              <a
+                href="./images/gallery/wedding-3.jpeg"
+                class="wedding-gallery-item wedding-gallery-large"
+              >
+                <img
+                  src="./images/gallery/wedding-3.jpeg"
+                  alt="Wedding event at Mozar Palace"
+                />
+              </a>
+
+              <!-- <a
+                href="assets/images/weddings/wedding-4.jpg"
+                class="wedding-gallery-item"
+              >
+                <img
+                  src="assets/images/weddings/wedding-4.jpg"
+                  alt="Wedding ceremony at Mozar Palace"
+                />
+              </a> -->
+
+              <!-- <a
+                href="assets/images/weddings/wedding-5.jpg"
+                class="wedding-gallery-item"
+              >
+                <img
+                  src="assets/images/weddings/wedding-5.jpg"
+                  alt="Wedding reception at Mozar Palace"
+                />
+              </a> -->
+
+              <!-- <a
+                href="assets/images/weddings/wedding-6.jpg"
+                class="wedding-gallery-item"
+              >
+                <img
+                  src="assets/images/weddings/wedding-6.jpg"
+                  alt="Wedding celebration venue at Mozar Palace"
+                />
+              </a> -->
             </div>
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <span class="timeline-num">03</span>
-                <h3 style="color: var(--primary-bg)">Plan</h3>
-                <p style="color: #555">
-                  Discuss your event requirements and finalize spaces.
-                </p>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <span class="timeline-num">04</span>
-                <h3 style="color: var(--primary-bg)">Celebrate</h3>
-                <p style="color: #555">
-                  Bring your occasion to life flawlessly.
-                </p>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <span class="timeline-num">05</span>
-                <h3 style="color: var(--primary-bg)">Remember</h3>
-                <p style="color: #555">Create memories that last a lifetime.</p>
-              </div>
+
+            <div class="wedding-gallery-button">
+              <a href="#gallery" class="btn btn-outline"> View Full Gallery </a>
             </div>
           </div>
-        </div>
+        </section>
       </section>
 
       <!-- ================= EVENTS PAGE ================= -->
