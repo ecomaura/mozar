@@ -2014,25 +2014,15 @@
       .form-group select,
       .form-group textarea {
         width: 100%;
-
         box-sizing: border-box;
-
         padding: 13px 15px;
-
         border: 1px solid #d8ddd8;
-
         border-radius: 6px;
-
         background: #fafaf7;
-
         color: #294234;
-
         font-family: inherit;
-
         font-size: 0.9rem;
-
         outline: none;
-
         transition: 0.25s ease;
       }
 
@@ -2046,9 +2036,7 @@
       .form-group select:focus,
       .form-group textarea:focus {
         border-color: #c89219;
-
         background: #fff;
-
         box-shadow: 0 0 0 3px rgba(200, 146, 25, 0.08);
       }
 
@@ -2063,36 +2051,21 @@
 
       .enquiry-submit {
         display: inline-flex;
-
         align-items: center;
         justify-content: center;
-
         gap: 12px;
-
         width: 100%;
-
         margin-top: 5px;
-
         padding: 15px 25px;
-
         border: 1px solid #294234;
-
         background: #294234;
-
         color: #fff;
-
         font-family: inherit;
-
         font-size: 0.88rem;
-
         font-weight: 700;
-
         letter-spacing: 0.08em;
-
         text-transform: uppercase;
-
         cursor: pointer;
-
         transition: 0.3s ease;
       }
 
@@ -2194,6 +2167,1053 @@
           padding: 22px 16px;
         }
       }
+
+      /* =========================================
+   EVENT PACKAGES - LIGHT PREMIUM STYLE
+========================================= */
+
+      #packages {
+        background: #f5f0e6;
+        padding: 110px 0;
+      }
+
+      /* Section heading */
+      #packages .eyebrow {
+        color: #b88618;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+      }
+
+      #packages .section-title {
+        color: #294234;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(2.5rem, 4vw, 3.5rem);
+        font-weight: 400;
+        line-height: 1.15;
+      }
+
+      #packages .section-subtitle {
+        color: #657067;
+        max-width: 600px;
+        margin: 15px auto 0;
+        line-height: 1.7;
+      }
+
+      /* =========================================
+   PACKAGE GRID
+========================================= */
+
+      #packages .grid-4 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 26px;
+      }
+
+      /* =========================================
+   PACKAGE CARD
+========================================= */
+
+      #packages .card {
+        position: relative;
+
+        padding: 35px 30px;
+
+        background: #fffdf8;
+
+        border: 1px solid rgba(41, 66, 52, 0.14);
+
+        border-radius: 4px;
+
+        box-shadow: 0 8px 30px rgba(41, 66, 52, 0.06);
+
+        display: flex;
+        flex-direction: column;
+
+        min-height: 320px;
+
+        overflow: hidden;
+
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease,
+          border-color 0.3s ease;
+      }
+
+      /* Gold top line */
+
+      #packages .card::before {
+        content: "";
+
+        position: absolute;
+
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 3px;
+
+        background: #c89219;
+
+        transform: scaleX(0.25);
+
+        transform-origin: left;
+
+        transition: transform 0.3s ease;
+      }
+
+      #packages .card:hover {
+        transform: translateY(-7px);
+
+        border-color: rgba(200, 146, 25, 0.45);
+
+        box-shadow: 0 20px 45px rgba(41, 66, 52, 0.12);
+      }
+
+      #packages .card:hover::before {
+        transform: scaleX(1);
+      }
+
+      /* =========================================
+   PACKAGE TITLE
+========================================= */
+
+      #packages .card h3 {
+        margin: 0;
+
+        color: #294234;
+
+        font-family: Georgia, "Times New Roman", serif;
+
+        font-size: 1.55rem;
+
+        font-weight: 400;
+
+        line-height: 1.3;
+      }
+
+      /* =========================================
+   PRICE
+========================================= */
+
+      #packages .card p[style*="accent-luxury"] {
+        display: inline-block;
+
+        color: #b27b0c !important;
+
+        font-family: Georgia, "Times New Roman", serif !important;
+
+        font-size: 1.45rem !important;
+
+        font-weight: 600;
+
+        letter-spacing: 0.01em;
+
+        margin: 18px 0 !important;
+      }
+
+      /* =========================================
+   DIVIDER
+========================================= */
+
+      #packages .card hr {
+        border: 0 !important;
+
+        border-top: 1px solid rgba(41, 66, 52, 0.12) !important;
+
+        margin: 0 0 20px !important;
+      }
+
+      /* =========================================
+   DESCRIPTION
+========================================= */
+
+      #packages .card p:not([style*="accent-luxury"]) {
+        color: #68736b;
+
+        font-size: 0.92rem !important;
+
+        line-height: 1.7;
+
+        margin: 0;
+      }
+
+      /* =========================================
+   BUTTON
+========================================= */
+
+      #packages .card .btn {
+        margin-top: auto !important;
+
+        width: 100%;
+
+        padding: 12px 20px !important;
+
+        border: 1px solid #294234;
+
+        background: transparent;
+
+        color: #294234;
+
+        font-size: 0.78rem;
+
+        font-weight: 700;
+
+        letter-spacing: 0.12em;
+
+        text-transform: uppercase;
+
+        transition: all 0.3s ease;
+      }
+
+      #packages .card .btn:hover {
+        background: #294234;
+
+        border-color: #294234;
+
+        color: #fff;
+      }
+
+      /* =========================================
+   RESPONSIVE
+========================================= */
+
+      @media (max-width: 992px) {
+        #packages {
+          padding: 85px 0;
+        }
+
+        #packages .grid-4 {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 576px) {
+        #packages {
+          padding: 65px 0;
+        }
+
+        #packages .grid-4 {
+          grid-template-columns: 1fr;
+        }
+
+        #packages .card {
+          min-height: auto;
+
+          padding: 30px 25px;
+        }
+
+        #packages .section-title {
+          font-size: 2.4rem;
+        }
+      }
+
+      /* =========================================
+   GALLERY - LIGHT LUXURY THEME
+========================================= */
+
+      .gallery-section {
+        background: #f5f0e6;
+        padding: 110px 0 120px;
+      }
+
+      .gallery-container {
+        width: min(1200px, calc(100% - 50px));
+        margin: 0 auto;
+      }
+
+      /* =========================================
+   HEADING
+========================================= */
+
+      .gallery-heading {
+        max-width: 720px;
+        margin: 0 auto;
+      }
+
+      .gallery-eyebrow {
+        display: block;
+
+        margin-bottom: 14px;
+
+        color: #b88618;
+
+        font-size: 0.76rem;
+        font-weight: 700;
+
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+      }
+
+      .gallery-heading h2 {
+        margin: 0;
+
+        color: #294234;
+
+        font-family: Georgia, "Times New Roman", serif;
+
+        font-size: clamp(2.6rem, 4.5vw, 4rem);
+
+        font-weight: 400;
+
+        line-height: 1.1;
+      }
+
+      .gallery-heading p {
+        max-width: 600px;
+
+        margin: 18px auto 0;
+
+        color: #667168;
+
+        font-size: 0.98rem;
+
+        line-height: 1.7;
+      }
+
+      /* =========================================
+   ORNAMENT
+========================================= */
+
+      .gallery-ornament {
+        position: relative;
+
+        width: 90px;
+        height: 20px;
+
+        margin: 24px auto 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .gallery-ornament::before,
+      .gallery-ornament::after {
+        content: "";
+
+        position: absolute;
+
+        top: 50%;
+
+        width: 35px;
+        height: 1px;
+
+        background: #294234;
+      }
+
+      .gallery-ornament::before {
+        left: 0;
+      }
+
+      .gallery-ornament::after {
+        right: 0;
+      }
+
+      .gallery-ornament span {
+        position: relative;
+        z-index: 2;
+
+        padding: 0 8px;
+
+        background: #f5f0e6;
+
+        color: #c89219;
+
+        font-size: 9px;
+      }
+
+      /* =========================================
+   FILTERS
+========================================= */
+
+      .gallery-filters {
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+        flex-wrap: wrap;
+
+        gap: 10px;
+
+        margin: 45px 0 38px;
+      }
+
+      .gallery-filter {
+        padding: 10px 20px;
+
+        background: transparent;
+
+        border: 1px solid transparent;
+
+        border-radius: 30px;
+
+        color: #526057;
+
+        font-family: inherit;
+
+        font-size: 0.78rem;
+
+        font-weight: 700;
+
+        letter-spacing: 0.08em;
+
+        text-transform: uppercase;
+
+        cursor: pointer;
+
+        transition: all 0.3s ease;
+      }
+
+      .gallery-filter:hover {
+        color: #294234;
+
+        border-color: rgba(41, 66, 52, 0.2);
+      }
+
+      .gallery-filter.active {
+        background: #294234;
+
+        border-color: #294234;
+
+        color: #fff;
+      }
+
+      /* =========================================
+   GALLERY GRID
+========================================= */
+
+      .gallery-grid {
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        grid-auto-rows: 230px;
+
+        gap: 20px;
+      }
+
+      /* =========================================
+   GALLERY ITEM
+========================================= */
+
+      .gallery-item {
+        position: relative;
+
+        display: block;
+
+        overflow: hidden;
+
+        border-radius: 14px;
+
+        background: #ddd;
+
+        box-shadow: 0 8px 25px rgba(41, 66, 52, 0.07);
+
+        text-decoration: none;
+
+        transition:
+          transform 0.35s ease,
+          box-shadow 0.35s ease;
+      }
+
+      /* Featured image */
+
+      .gallery-featured {
+        grid-row: span 2;
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 100%;
+
+        display: block;
+
+        object-fit: cover;
+
+        transition: transform 0.6s ease;
+      }
+
+      .gallery-item:hover {
+        transform: translateY(-4px);
+
+        box-shadow: 0 18px 40px rgba(41, 66, 52, 0.14);
+      }
+
+      .gallery-item:hover img {
+        transform: scale(1.06);
+      }
+
+      /* =========================================
+   IMAGE OVERLAY
+========================================= */
+
+      .gallery-overlay {
+        position: absolute;
+
+        inset: 0;
+
+        display: flex;
+
+        align-items: flex-end;
+
+        justify-content: flex-start;
+
+        padding: 22px;
+
+        background: linear-gradient(
+          180deg,
+          transparent 50%,
+          rgba(25, 43, 34, 0.7) 100%
+        );
+
+        opacity: 0;
+
+        transition: opacity 0.35s ease;
+      }
+
+      .gallery-item:hover .gallery-overlay {
+        opacity: 1;
+      }
+
+      .gallery-overlay span {
+        display: inline-flex;
+
+        padding: 9px 15px;
+
+        border: 1px solid rgba(255, 255, 255, 0.6);
+
+        color: #fff;
+
+        font-size: 0.72rem;
+
+        font-weight: 700;
+
+        letter-spacing: 0.1em;
+
+        text-transform: uppercase;
+      }
+
+      /* =========================================
+   HIDDEN FILTER ITEMS
+========================================= */
+
+      .gallery-item.gallery-hidden {
+        display: none;
+      }
+
+      /* =========================================
+   TABLET
+========================================= */
+
+      @media (max-width: 992px) {
+        .gallery-section {
+          padding: 85px 0;
+        }
+
+        .gallery-grid {
+          grid-template-columns: repeat(2, 1fr);
+
+          grid-auto-rows: 220px;
+        }
+
+        .gallery-featured {
+          grid-row: span 2;
+        }
+      }
+
+      /* =========================================
+   MOBILE
+========================================= */
+
+      @media (max-width: 650px) {
+        .gallery-section {
+          padding: 65px 0 75px;
+        }
+
+        .gallery-container {
+          width: calc(100% - 32px);
+        }
+
+        .gallery-heading h2 {
+          font-size: 2.5rem;
+        }
+
+        .gallery-heading p {
+          font-size: 0.9rem;
+        }
+
+        .gallery-filters {
+          gap: 5px;
+
+          margin: 35px 0 28px;
+        }
+
+        .gallery-filter {
+          padding: 8px 13px;
+
+          font-size: 0.68rem;
+        }
+
+        .gallery-grid {
+          grid-template-columns: 1fr 1fr;
+
+          grid-auto-rows: 180px;
+
+          gap: 12px;
+        }
+
+        .gallery-featured {
+          grid-column: span 2;
+
+          grid-row: span 1;
+
+          height: 260px;
+        }
+
+        .gallery-item {
+          border-radius: 11px;
+        }
+
+        .gallery-overlay {
+          display: none;
+        }
+      }
+
+      /* =========================================
+   SMALL MOBILE
+========================================= */
+
+      @media (max-width: 420px) {
+        .gallery-grid {
+          grid-template-columns: 1fr;
+
+          grid-auto-rows: 230px;
+        }
+
+        .gallery-featured {
+          grid-column: auto;
+
+          height: 250px;
+        }
+      }
+
+      /* =========================================
+                GALLERY LOAD MORE
+        ========================================= */
+
+      .gallery-load-more {
+        display: flex;
+        justify-content: center;
+        margin-top: 45px;
+      }
+
+      .gallery-load-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+
+        padding: 14px 30px;
+
+        background: transparent;
+        border: 1px solid #294234;
+
+        color: #294234;
+
+        font-family: inherit;
+        font-size: 0.78rem;
+        font-weight: 700;
+
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+
+        cursor: pointer;
+
+        transition: all 0.3s ease;
+      }
+
+      .gallery-load-btn span {
+        font-size: 1rem;
+        transition: transform 0.3s ease;
+      }
+
+      .gallery-load-btn:hover {
+        background: #294234;
+        color: #fff;
+      }
+
+      .gallery-load-btn:hover span {
+        transform: translateY(4px);
+      }
+
+      @media (max-width: 576px) {
+        .gallery-load-more {
+          margin-top: 30px;
+        }
+
+        .gallery-load-btn {
+          padding: 13px 26px;
+        }
+      }
+
+      .gallery-more {
+        display: none;
+      }
+
+      .gallery-more.show {
+        display: block;
+      }
+
+      /* =========================================
+            LIGHT ALTERNATING SECTION BACKGROUNDS
+        ========================================= */
+
+      .section-cream {
+        background: #f5f0e6;
+      }
+
+      .section-sage {
+        background: #eaf0ea;
+      }
+
+      .section-white {
+        background: #fbfaf6;
+      }
+
+      /* =========================================================
+   CONTACT PAGE
+========================================================= */
+
+      .contact-page {
+        background: #f5f0e6;
+        color: #294234;
+      }
+
+      /* HERO */
+
+      .contact-hero {
+        text-align: center;
+        padding: 90px 20px 65px;
+        background: #fbfaf6;
+      }
+
+      .contact-hero .eyebrow {
+        display: block;
+        margin-bottom: 14px;
+        color: #b88618;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
+
+      .contact-hero h1 {
+        margin: 0;
+        color: #294234;
+        font-family: var(--font-heading);
+        font-size: clamp(2.5rem, 5vw, 4.2rem);
+        line-height: 1.1;
+      }
+
+      .contact-hero p {
+        max-width: 650px;
+        margin: 20px auto 0;
+        color: #657067;
+        font-size: 1rem;
+        line-height: 1.8;
+      }
+
+      .contact-hero .ornament {
+        margin-top: 28px;
+      }
+
+      /* MAIN */
+
+      .contact-main {
+        padding: 90px 0;
+        background: #f5f0e6;
+      }
+
+      .contact-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 70px;
+        align-items: center;
+      }
+
+      /* LEFT */
+
+      .contact-label {
+        display: block;
+        margin-bottom: 12px;
+        color: #b88618;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      .contact-details h2 {
+        max-width: 520px;
+        margin-bottom: 18px;
+        color: #294234;
+        font-family: var(--font-heading);
+        font-size: clamp(2rem, 3.5vw, 3rem);
+        line-height: 1.15;
+      }
+
+      .contact-intro {
+        max-width: 560px;
+        margin-bottom: 35px;
+        color: #657067;
+        line-height: 1.8;
+      }
+
+      /* INFO */
+
+      .contact-info-list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .contact-info-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+      }
+
+      .contact-icon {
+        flex: 0 0 48px;
+        width: 48px;
+        height: 48px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 50%;
+        background: #294234;
+        color: #d49a19;
+
+        font-size: 17px;
+      }
+
+      .contact-info-item span {
+        display: block;
+        margin-bottom: 4px;
+
+        color: #b88618;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .contact-info-item p {
+        margin: 0;
+        color: #294234;
+        font-size: 0.96rem;
+        line-height: 1.6;
+      }
+
+      .contact-info-item a {
+        color: #294234;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .contact-info-item a:hover {
+        color: #b88618;
+      }
+
+      /* BUTTONS */
+
+      .contact-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 35px;
+      }
+
+      .contact-actions .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      /* MAP */
+
+      .contact-map {
+        width: 100%;
+      }
+
+      .map-card {
+        position: relative;
+        height: 500px;
+        overflow: hidden;
+
+        border: 1px solid rgba(41, 66, 52, 0.18);
+        border-radius: 6px;
+
+        background: #e8e4da;
+        box-shadow: 0 20px 50px rgba(41, 66, 52, 0.12);
+      }
+
+      .map-card iframe {
+        width: 100%;
+        height: 100%;
+        display: block;
+        border: 0;
+      }
+
+      .map-caption {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+
+        margin-top: 15px;
+        padding: 16px 18px;
+
+        background: #fbfaf6;
+        border: 1px solid rgba(41, 66, 52, 0.12);
+      }
+
+      .map-caption-icon {
+        width: 42px;
+        height: 42px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background: #294234;
+        color: #d49a19;
+        border-radius: 50%;
+      }
+
+      .map-caption strong {
+        display: block;
+        color: #294234;
+        margin-bottom: 3px;
+      }
+
+      .map-caption span {
+        display: block;
+        color: #657067;
+        font-size: 0.84rem;
+      }
+
+      /* CTA */
+
+      .contact-cta {
+        padding: 75px 0;
+        background: #eaf0ea;
+      }
+
+      .contact-cta-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+
+        padding: 45px 50px;
+
+        background: #294234;
+        color: #fff;
+        border-radius: 8px;
+      }
+
+      .contact-cta-inner h2 {
+        margin: 0 0 10px;
+        color: #fff;
+        font-family: var(--font-heading);
+        font-size: clamp(2rem, 3.5vw, 3rem);
+      }
+
+      .contact-cta-inner p {
+        max-width: 600px;
+        margin: 0;
+        color: rgba(255, 255, 255, 0.75);
+        line-height: 1.7;
+      }
+
+      .contact-cta-inner .contact-label {
+        color: #d49a19;
+      }
+
+      /* =========================================================
+   RESPONSIVE
+========================================================= */
+
+      @media (max-width: 992px) {
+        .contact-layout {
+          grid-template-columns: 1fr;
+          gap: 55px;
+        }
+
+        .contact-details {
+          max-width: 700px;
+        }
+
+        .map-card {
+          height: 420px;
+        }
+
+        .contact-cta-inner {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .contact-hero {
+          padding: 70px 20px 50px;
+        }
+
+        .contact-main {
+          padding: 65px 20px;
+        }
+
+        .contact-cta {
+          padding: 55px 20px;
+        }
+
+        .contact-cta-inner {
+          padding: 35px 25px;
+        }
+
+        .map-card {
+          height: 350px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .contact-info-item {
+          gap: 12px;
+        }
+
+        .contact-icon {
+          flex-basis: 42px;
+          width: 42px;
+          height: 42px;
+          font-size: 15px;
+        }
+
+        .contact-actions {
+          flex-direction: column;
+        }
+
+        .contact-actions .btn {
+          width: 100%;
+          justify-content: center;
+        }
+
+        .map-card {
+          height: 300px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -2208,7 +3228,7 @@
           <a href="#about">About</a>
           <a href="#weddings">Weddings</a>
           <a href="#events">Events</a>
-          <a href="#spaces">Spaces</a>
+          <a href="#rooms">Rooms</a>
           <a href="#gallery">Gallery</a>
           <a href="#packages">Packages</a>
           <a href="#contact">Contact</a>
@@ -2232,7 +3252,7 @@
       <a href="#about" onclick="toggleMobileMenu()">About</a>
       <a href="#weddings" onclick="toggleMobileMenu()">Weddings</a>
       <a href="#events" onclick="toggleMobileMenu()">Events</a>
-      <a href="#spaces" onclick="toggleMobileMenu()">Spaces</a>
+      <a href="#rooms" onclick="toggleMobileMenu()">Rooms</a>
       <a href="#gallery" onclick="toggleMobileMenu()">Gallery</a>
       <a href="#packages" onclick="toggleMobileMenu()">Packages</a>
       <a href="#contact" onclick="toggleMobileMenu()">Contact</a>
@@ -2266,13 +3286,13 @@
             </p>
             <div class="hero-btns">
               <a href="#enquiry" class="btn btn-primary">Plan Your Event</a>
-              <a href="#spaces" class="btn btn-outline">Explore The Venue</a>
+              <a href="#rooms" class="btn btn-outline">Explore The Venue</a>
             </div>
           </div>
         </div>
 
         <!-- ================= THE EXPERIENCE ================= -->
-        <section class="experience-section">
+        <section class="experience-section section-cream">
           <div class="experience-container">
             <!-- Content -->
             <div class="experience-content">
@@ -2305,7 +3325,7 @@
             <div class="experience-image">
               <div class="experience-image-frame">
                 <img
-                  src="assets/images/about/experience.jpg"
+                  src="./images/image6.jpeg"
                   alt="Mozar Palace accommodation and interiors"
                 />
               </div>
@@ -2471,34 +3491,31 @@
         </div>
 
         <!-- ================= ROOMS & STAY ================= -->
-        <section class="rooms-stay">
+        <section class="rooms-stay section-sage">
           <div class="rooms-stay-container">
             <!-- LEFT: Room Images -->
             <div class="rooms-gallery">
               <div class="room-image">
                 <img
-                  src="assets/images/rooms/room-1.jpg"
+                  src="./images/image2.jpeg"
                   alt="Luxurious bedroom at Mozar Palace"
                 />
               </div>
 
               <div class="room-image">
-                <img
-                  src="assets/images/rooms/room-2.jpg"
-                  alt="Mozar Palace bedroom"
-                />
+                <img src="./images/image13.jpeg" alt="Mozar Palace bedroom" />
               </div>
 
               <div class="room-image">
                 <img
-                  src="assets/images/rooms/room-3.jpg"
+                  src="./images/image20.jpeg"
                   alt="Spacious room at Mozar Palace"
                 />
               </div>
 
               <div class="room-image">
                 <img
-                  src="assets/images/rooms/room-4.jpg"
+                  src="./images/image26.jpeg"
                   alt="Mozar Palace accommodation"
                 />
               </div>
@@ -2557,7 +3574,7 @@
         </section>
 
         <!-- ================= CONTACT / ENQUIRY ================= -->
-        <section class="home-enquiry" id="contact">
+        <section class="home-enquiry">
           <div class="enquiry-container">
             <!-- Left Content -->
             <div class="enquiry-content">
@@ -2653,19 +3670,12 @@
 
                     <select id="event-type" name="event_type" required>
                       <option value="">Select event</option>
-
                       <option value="wedding">Wedding</option>
-
                       <option value="reception">Reception</option>
-
                       <option value="engagement">Engagement</option>
-
                       <option value="birthday">Birthday Celebration</option>
-
                       <option value="anniversary">Anniversary</option>
-
                       <option value="corporate">Corporate Event</option>
-
                       <option value="other">Other</option>
                     </select>
                   </div>
@@ -2713,86 +3723,6 @@
         </section>
 
         <!-- ================= GALLERY ================= -->
-        <section class="property-gallery">
-          <div class="gallery-container">
-            <div class="gallery-heading">
-              <span class="gallery-eyebrow">A Glimpse of Mozar Palace</span>
-
-              <h2>Explore Our Gallery</h2>
-
-              <p>
-                Take a look at Mozar Palace and discover the beautiful spaces,
-                peaceful surroundings and memorable experiences waiting for you.
-              </p>
-            </div>
-
-            <div class="gallery-slider">
-              <div class="gallery-track">
-                <div class="gallery-slide active">
-                  <img
-                    src="assets/images/gallery/property-1.jpg"
-                    alt="Mozar Palace Property"
-                  />
-                </div>
-
-                <div class="gallery-slide">
-                  <img
-                    src="assets/images/gallery/property-2.jpg"
-                    alt="Mozar Palace Property"
-                  />
-                </div>
-
-                <div class="gallery-slide">
-                  <img
-                    src="assets/images/gallery/property-3.jpg"
-                    alt="Mozar Palace Property"
-                  />
-                </div>
-
-                <div class="gallery-slide">
-                  <img
-                    src="assets/images/gallery/property-4.jpg"
-                    alt="Mozar Palace Property"
-                  />
-                </div>
-
-                <div class="gallery-slide">
-                  <img
-                    src="assets/images/gallery/property-5.jpg"
-                    alt="Mozar Palace Property"
-                  />
-                </div>
-
-                <div class="gallery-slide">
-                  <img
-                    src="assets/images/gallery/property-6.jpg"
-                    alt="Mozar Palace Property"
-                  />
-                </div>
-              </div>
-
-              <!-- Navigation -->
-              <button
-                class="gallery-prev"
-                type="button"
-                aria-label="Previous image"
-              >
-                &#10094;
-              </button>
-
-              <button
-                class="gallery-next"
-                type="button"
-                aria-label="Next image"
-              >
-                &#10095;
-              </button>
-
-              <!-- Dots -->
-              <div class="gallery-dots"></div>
-            </div>
-          </div>
-        </section>
       </section>
 
       <!-- ================= ABOUT PAGE ================= -->
@@ -3032,8 +3962,8 @@
         </div>
       </section>
 
-      <!-- ================= SPACES PAGE ================= -->
-      <section id="spaces" class="page-section">
+      <!-- ================= ROOMS PAGE ================= -->
+      <section id="rooms" class="page-section">
         <div class="container">
           <div class="text-center">
             <span class="eyebrow">Our Venues</span>
@@ -3157,111 +4087,476 @@
       </section>
 
       <!-- ================= GALLERY PAGE ================= -->
-      <section id="gallery" class="page-section">
-        <div class="container">
-          <div class="text-center">
-            <span class="eyebrow">Visuals</span>
-            <h2 class="section-title">The Gallery</h2>
-            <div class="ornament"></div>
+      <section id="gallery" class="page-section gallery-section section-sage">
+        <div class="gallery-container">
+          <!-- Heading -->
+          <div class="gallery-heading text-center">
+            <span class="gallery-eyebrow"> Visuals </span>
+
+            <h2>The Gallery</h2>
+
+            <p>
+              Explore the beautiful spaces, celebrations and memorable moments
+              at Mozar Palace.
+            </p>
+
+            <div class="gallery-ornament">
+              <span>◆</span>
+            </div>
           </div>
 
+          <!-- Filter -->
           <div class="gallery-filters">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="weddings">Weddings</button>
-            <button class="filter-btn" data-filter="decorations">
+            <button class="gallery-filter active" data-filter="all">All</button>
+
+            <button class="gallery-filter" data-filter="weddings">
+              Weddings
+            </button>
+
+            <button class="gallery-filter" data-filter="decorations">
               Decorations
             </button>
-            <button class="filter-btn" data-filter="venue">Venue</button>
-            <button class="filter-btn" data-filter="events">Events</button>
+
+            <button class="gallery-filter" data-filter="venue">Venue</button>
+
+            <button class="gallery-filter" data-filter="events">Events</button>
           </div>
 
-          <div class="gallery-grid" id="galleryGrid">
-            <!-- Gallery Items -->
-            <div
-              class="gallery-item"
-              data-category="weddings"
-              onclick="openLightbox(this)"
+          <!-- Gallery -->
+          <div class="gallery-grid">
+            <!-- Featured Image -->
+            <a
+              href="./images/image1.jpeg"
+              class="gallery-item gallery-featured"
+              data-category="venue"
             >
               <img
-                src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=600&q=80"
-                alt="Wedding"
+                src="./images/image1.jpeg"
+                alt="Mozar Palace property and outdoor area"
               />
-              <div class="gallery-overlay"><i>View</i></div>
-            </div>
-            <div
+
+              <div class="gallery-overlay">
+                <span>View Image</span>
+              </div>
+            </a>
+
+            <!-- Image 2 -- 1 -->
+            <a
+              href="./images/gallery/wedding-1.jpeg"
+              class="gallery-item"
+              data-category="weddings"
+            >
+              <img
+                src="./images/gallery/wedding-1.jpeg"
+                alt="Wedding setup at Mozar Palace"
+              />
+
+              <div class="gallery-overlay">
+                <span>View Image</span>
+              </div>
+            </a>
+
+            <!-- Image 2 - 2 -->
+            <a
+              href="./images/gallery/wedding-2.jpeg"
+              class="gallery-item"
+              data-category="weddings"
+            >
+              <img
+                src="./images/gallery/wedding-2.jpeg"
+                alt="Wedding setup at Mozar Palace"
+              />
+
+              <div class="gallery-overlay">
+                <span>View Image</span>
+              </div>
+            </a>
+
+            <!-- Image 2 - 3 -->
+            <a
+              href="./images/gallery/wedding-3.jpeg"
+              class="gallery-item"
+              data-category="weddings"
+            >
+              <img
+                src="./images/gallery/wedding-3.jpeg"
+                alt="Wedding setup at Mozar Palace"
+              />
+
+              <div class="gallery-overlay">
+                <span>View Image</span>
+              </div>
+            </a>
+
+            <!-- Image 3 -->
+            <a
+              href="./images/image3.jpeg"
+              class="gallery-item"
+              data-category="decorations"
+            >
+              <img
+                src="./images/image3.jpeg"
+                alt="Beautiful decoration at Mozar Palace"
+              />
+
+              <div class="gallery-overlay">
+                <span>View Image</span>
+              </div>
+            </a>
+
+            <!-- Image 4 -->
+            <a
+              href="./images/image25.jpeg"
               class="gallery-item"
               data-category="venue"
-              onclick="openLightbox(this)"
             >
               <img
-                src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=600&q=80"
-                alt="Venue"
+                src="./images/image25.jpeg"
+                alt="Mozar Palace rooms and accommodation"
               />
-              <div class="gallery-overlay"><i>View</i></div>
-            </div>
-            <div
-              class="gallery-item"
-              data-category="decorations"
-              onclick="openLightbox(this)"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=600&q=80"
-                alt="Decoration"
-              />
-              <div class="gallery-overlay"><i>View</i></div>
-            </div>
-            <div
+
+              <div class="gallery-overlay">
+                <span>View Image</span>
+              </div>
+            </a>
+
+            <!-- Image 5 -->
+            <a
+              href="./images/image5.jpeg"
               class="gallery-item"
               data-category="events"
-              onclick="openLightbox(this)"
             >
               <img
-                src="https://images.unsplash.com/photo-1511556532299-8f662fc26c06?auto=format&fit=crop&w=600&q=80"
-                alt="Event"
+                src="./images/image5.jpeg"
+                alt="Event celebration at Mozar Palace"
               />
-              <div class="gallery-overlay"><i>View</i></div>
-            </div>
-            <div
+
+              <div class="gallery-overlay">
+                <span>View Image</span>
+              </div>
+            </a>
+
+            <!-- Image 6 -->
+            <a
+              href="./images/image6.jpeg"
               class="gallery-item"
-              data-category="weddings"
-              onclick="openLightbox(this)"
+              data-category="venue"
             >
               <img
-                src="https://images.unsplash.com/photo-1530103862676-de8892bf309c?auto=format&fit=crop&w=600&q=80"
-                alt="Wedding Dining"
+                src="./images/image6.jpeg"
+                alt="Mozar Palace outdoor space"
               />
-              <div class="gallery-overlay"><i>View</i></div>
-            </div>
-            <div
-              class="gallery-item"
-              data-category="decorations"
-              onclick="openLightbox(this)"
+
+              <div class="gallery-overlay">
+                <span>View Image</span>
+              </div>
+            </a>
+
+            <!-- Hidden images -->
+
+            <!-- image 7 -->
+            <a
+              href="./images/image26.jpeg"
+              class="gallery-item gallery-more"
+              data-category="venue"
             >
               <img
-                src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=600&q=80"
-                alt="Outdoor Decor"
+                src="./images/image26.jpeg"
+                alt="Mozar Palace outdoor space"
               />
-              <div class="gallery-overlay"><i>View</i></div>
-            </div>
+
+              <div class="gallery-overlay">
+                <span>View Image</span>
+              </div>
+            </a>
+
+            <!-- image 8 -->
+            <a
+              href="./images/image8.jpeg"
+              class="gallery-item gallery-more"
+              data-category="venue"
+            >
+              <img
+                src="./images/image8.jpeg"
+                alt="Mozar Palace outdoor space"
+              />
+
+              <div class="gallery-overlay">
+                <span>View Image</span>
+              </div>
+            </a>
+
+            <!-- image 9 -->
+            <a
+              href="./images/image9.jpeg"
+              class="gallery-item gallery-more"
+              data-category="venue"
+            >
+              <img
+                src="./images/image9.jpeg"
+                alt="Mozar Palace outdoor space"
+              />
+
+              <div class="gallery-overlay">
+                <span>View Image</span>
+              </div>
+            </a>
+
+            <!-- image 10 -->
+            <a
+              href="./images/image10.jpeg"
+              class="gallery-item gallery-more"
+              data-category="venue"
+            >
+              <img
+                src="./images/image10.jpeg"
+                alt="Mozar Palace outdoor space"
+              />
+
+              <div class="gallery-overlay">
+                <span>View Image</span>
+              </div>
+            </a>
+
+            <!-- image 11 -->
+            <a
+              href="./images/image11.jpeg"
+              class="gallery-item gallery-more"
+              data-category="venue"
+            >
+              <img
+                src="./images/image11.jpeg"
+                alt="Mozar Palace outdoor space"
+              />
+
+              <div class="gallery-overlay">
+                <span>View Image</span>
+              </div>
+            </a>
+
+            <!-- image 12 -->
+            <a
+              href="./images/image12.jpeg"
+              class="gallery-item gallery-more"
+              data-category="venue"
+            >
+              <img
+                src="./images/image12.jpeg"
+                alt="Mozar Palace outdoor space"
+              />
+
+              <div class="gallery-overlay">
+                <span>View Image</span>
+              </div>
+            </a>
+
+            <!-- image 13 -->
+            <a
+              href="./images/image13.jpeg"
+              class="gallery-item gallery-more"
+              data-category="venue"
+            >
+              <img
+                src="./images/image13.jpeg"
+                alt="Mozar Palace outdoor space"
+              />
+
+              <div class="gallery-overlay">
+                <span>View Image</span>
+              </div>
+            </a>
+
+            <!-- image 14 -->
+            <a
+              href="./images/image14.jpeg"
+              class="gallery-item gallery-more"
+              data-category="venue"
+            >
+              <img
+                src="./images/image14.jpeg"
+                alt="Mozar Palace outdoor space"
+              />
+
+              <div class="gallery-overlay">
+                <span>View Image</span>
+              </div>
+            </a>
+
+            <!-- image 15 -->
+            <a
+              href="./images/image15.jpeg"
+              class="gallery-item gallery-more"
+              data-category="venue"
+            >
+              <img
+                src="./images/image15.jpeg"
+                alt="Mozar Palace outdoor space"
+              />
+
+              <div class="gallery-overlay">
+                <span>View Image</span>
+              </div>
+            </a>
+
+            <!-- image 16 -->
+            <a
+              href="./images/image16.jpeg"
+              class="gallery-item gallery-more"
+              data-category="venue"
+            >
+              <img
+                src="./images/image16.jpeg"
+                alt="Mozar Palace outdoor space"
+              />
+
+              <div class="gallery-overlay">
+                <span>View Image</span>
+              </div>
+            </a>
+
+            <!-- image 17 -->
+            <a
+              href="./images/image17.jpeg"
+              class="gallery-item gallery-more"
+              data-category="venue"
+            >
+              <img
+                src="./images/image17.jpeg"
+                alt="Mozar Palace outdoor space"
+              />
+
+              <div class="gallery-overlay">
+                <span>View Image</span>
+              </div>
+            </a>
+
+            <!-- image 18 -->
+            <a
+              href="./images/image18.jpeg"
+              class="gallery-item gallery-more"
+              data-category="venue"
+            >
+              <img
+                src="./images/image18.jpeg"
+                alt="Mozar Palace outdoor space"
+              />
+
+              <div class="gallery-overlay">
+                <span>View Image</span>
+              </div>
+            </a>
+
+            <!-- image 19 -->
+            <a
+              href="./images/image19.jpeg"
+              class="gallery-item gallery-more"
+              data-category="venue"
+            >
+              <img
+                src="./images/image19.jpeg"
+                alt="Mozar Palace outdoor space"
+              />
+
+              <div class="gallery-overlay">
+                <span>View Image</span>
+              </div>
+            </a>
+
+            <!-- image 20 -->
+            <a
+              href="./images/image20.jpeg"
+              class="gallery-item gallery-more"
+              data-category="venue"
+            >
+              <img
+                src="./images/image20.jpeg"
+                alt="Mozar Palace outdoor space"
+              />
+
+              <div class="gallery-overlay">
+                <span>View Image</span>
+              </div>
+            </a>
+
+            <!-- image 21 -->
+            <a
+              href="./images/image21.jpeg"
+              class="gallery-item gallery-more"
+              data-category="venue"
+            >
+              <img
+                src="./images/image21.jpeg"
+                alt="Mozar Palace outdoor space"
+              />
+
+              <div class="gallery-overlay">
+                <span>View Image</span>
+              </div>
+            </a>
+
+            <!-- image 22 -->
+            <a
+              href="./images/image22.jpeg"
+              class="gallery-item gallery-more"
+              data-category="venue"
+            >
+              <img
+                src="./images/image22.jpeg"
+                alt="Mozar Palace outdoor space"
+              />
+
+              <div class="gallery-overlay">
+                <span>View Image</span>
+              </div>
+            </a>
+
+            <!-- image 23 -->
+            <a
+              href="./images/image23.jpeg"
+              class="gallery-item gallery-more"
+              data-category="venue"
+            >
+              <img
+                src="./images/image23.jpeg"
+                alt="Mozar Palace outdoor space"
+              />
+
+              <div class="gallery-overlay">
+                <span>View Image</span>
+              </div>
+            </a>
           </div>
         </div>
-      </section>
 
+        <!-- Load More -->
+        <div class="gallery-load-more">
+          <button type="button" id="galleryLoadMore" class="gallery-load-btn">
+            Load More
+            <span>↓</span>
+          </button>
+        </div>
+      </section>
       <!-- ================= PACKAGES PAGE ================= -->
       <section id="packages" class="page-section">
         <div class="container">
           <div class="text-center">
             <span class="eyebrow">Offerings</span>
+
             <h2 class="section-title">Event Packages</h2>
+
             <p class="section-subtitle">
-              Curated experiences for your special day.
+              Thoughtfully designed packages for celebrations, events, and
+              memorable stays.
             </p>
+
             <div class="ornament"></div>
           </div>
 
           <div class="grid-4" style="margin-top: 3rem">
+            <!-- Wedding Package -->
             <div class="card">
               <h3>Wedding Package</h3>
+
               <p
                 style="
                   font-family: var(--font-sub);
@@ -3270,24 +4565,31 @@
                   margin: 1rem 0;
                 "
               >
-                Starting From ₹_____
+                ₹3,999 / Person
               </p>
+
               <hr
                 style="border-color: rgba(255, 255, 255, 0.1); margin: 1.5rem 0"
               />
+
               <p style="font-size: 0.9rem">
                 Comprehensive venue and service package tailored for traditional
                 and modern weddings.
               </p>
+
               <a
                 href="#enquiry"
                 class="btn btn-outline"
                 style="margin-top: 1.5rem; width: 100%; padding: 0.8rem"
-                >Enquire</a
               >
+                Enquire
+              </a>
             </div>
+
+            <!-- Reception Package -->
             <div class="card">
               <h3>Reception Package</h3>
+
               <p
                 style="
                   font-family: var(--font-sub);
@@ -3296,24 +4598,31 @@
                   margin: 1rem 0;
                 "
               >
-                Starting From ₹_____
+                ₹3,499 / Person
               </p>
+
               <hr
                 style="border-color: rgba(255, 255, 255, 0.1); margin: 1.5rem 0"
               />
+
               <p style="font-size: 0.9rem">
                 Elegant setup and dining arrangements for grand post-wedding
                 celebrations.
               </p>
+
               <a
                 href="#enquiry"
                 class="btn btn-outline"
                 style="margin-top: 1.5rem; width: 100%; padding: 0.8rem"
-                >Enquire</a
               >
+                Enquire
+              </a>
             </div>
+
+            <!-- Celebration Package -->
             <div class="card">
               <h3>Celebration Package</h3>
+
               <p
                 style="
                   font-family: var(--font-sub);
@@ -3322,24 +4631,31 @@
                   margin: 1rem 0;
                 "
               >
-                Starting From ₹_____
+                ₹2,999 / Person
               </p>
+
               <hr
                 style="border-color: rgba(255, 255, 255, 0.1); margin: 1.5rem 0"
               />
+
               <p style="font-size: 0.9rem">
                 Perfect for milestone birthdays, anniversaries, and engagement
                 ceremonies.
               </p>
+
               <a
                 href="#enquiry"
                 class="btn btn-outline"
                 style="margin-top: 1.5rem; width: 100%; padding: 0.8rem"
-                >Enquire</a
               >
+                Enquire
+              </a>
             </div>
+
+            <!-- Corporate Package -->
             <div class="card">
               <h3>Corporate Package</h3>
+
               <p
                 style="
                   font-family: var(--font-sub);
@@ -3348,141 +4664,234 @@
                   margin: 1rem 0;
                 "
               >
-                Starting From ₹_____
+                ₹2,499 / Person
               </p>
+
               <hr
                 style="border-color: rgba(255, 255, 255, 0.1); margin: 1.5rem 0"
               />
+
               <p style="font-size: 0.9rem">
                 Professional setups, corporate dining, and high-end service for
                 business events.
               </p>
+
               <a
                 href="#enquiry"
                 class="btn btn-outline"
                 style="margin-top: 1.5rem; width: 100%; padding: 0.8rem"
-                >Enquire</a
               >
+                Enquire
+              </a>
+            </div>
+
+            <!-- Stay & Food Package -->
+            <div class="card">
+              <h3>Stay &amp; Food Package</h3>
+
+              <p
+                style="
+                  font-family: var(--font-sub);
+                  color: var(--accent-luxury);
+                  font-size: 1.2rem;
+                  margin: 1rem 0;
+                "
+              >
+                ₹2,299 / Person
+              </p>
+
+              <hr
+                style="border-color: rgba(255, 255, 255, 0.1); margin: 1.5rem 0"
+              />
+
+              <p style="font-size: 0.9rem">
+                A comfortable stay with delicious food and essential amenities
+                for a relaxing experience.
+              </p>
+
+              <a
+                href="#enquiry"
+                class="btn btn-outline"
+                style="margin-top: 1.5rem; width: 100%; padding: 0.8rem"
+              >
+                Enquire
+              </a>
             </div>
           </div>
         </div>
       </section>
 
       <!-- ================= CONTACT PAGE ================= -->
-      <section id="contact" class="page-section">
-        <div class="container">
-          <div class="text-center">
-            <span class="eyebrow">Get In Touch</span>
-            <h2 class="section-title">Contact & Location</h2>
+      <section id="contact" class="page-section contact-page">
+        <div class="contact-hero">
+          <div class="container">
+            <span class="eyebrow">GET IN TOUCH</span>
+
+            <h1>Contact &amp; Location</h1>
+
+            <p>
+              Planning your next celebration? We would love to help you create
+              unforgettable moments at Mozar Palace.
+            </p>
+
             <div class="ornament"></div>
           </div>
+        </div>
 
-          <div class="grid-2">
-            <!-- Info -->
-            <div>
-              <h3 style="font-size: 2rem; margin-bottom: 2rem">
-                Visit Mozar Palace
-              </h3>
-              <p style="margin-bottom: 1rem">
-                <strong style="color: var(--accent-luxury)">Address:</strong>
-                <br /><span id="conf-address"
-                  >[Insert Address], [Insert City], [Insert State]</span
-                >
-              </p>
-              <p style="margin-bottom: 1rem">
-                <strong style="color: var(--accent-luxury)">Phone:</strong>
-                <br /><span id="conf-phone">[Insert Phone]</span>
-              </p>
-              <p style="margin-bottom: 1rem">
-                <strong style="color: var(--accent-luxury)">WhatsApp:</strong>
-                <br /><span id="conf-whatsapp">[Insert WhatsApp]</span>
-              </p>
-              <p style="margin-bottom: 1rem">
-                <strong style="color: var(--accent-luxury)">Email:</strong>
-                <br /><span id="conf-email">[Insert Email]</span>
-              </p>
-              <p style="margin-bottom: 2rem">
-                <strong style="color: var(--accent-luxury)">Hours:</strong>
-                <br /><span id="conf-hours">[Insert Opening Hours]</span>
-              </p>
+        <div class="contact-main">
+          <div class="container">
+            <div class="contact-layout">
+              <!-- LEFT: CONTACT DETAILS -->
+              <div class="contact-details">
+                <span class="contact-label">VISIT US</span>
 
-              <div style="display: flex; gap: 1rem">
-                <a
-                  href="#"
-                  id="conf-mapbtn"
-                  target="_blank"
-                  class="btn btn-primary"
-                  >Get Directions</a
-                >
-                <a href="#enquiry" class="btn btn-outline">Plan Your Event</a>
-              </div>
-            </div>
-            <!-- Map Placeholder -->
-            <div
-              style="
-                height: 400px;
-                background: #1a251d;
-                border: 1px solid var(--accent-luxury);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-                padding: 2rem;
-              "
-            >
-              <div>
-                <svg
-                  width="40"
-                  height="40"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="#D89A20"
-                  stroke-width="2"
-                  style="margin-bottom: 1rem"
-                >
-                  <path
-                    d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
-                  ></path>
-                  <circle cx="12" cy="10" r="3"></circle>
-                </svg>
-                <h4 style="margin: 0">Google Maps Integration</h4>
-                <p style="font-size: 0.8rem; color: #888">
-                  Replace this box with actual iframe embed code from Google
-                  Maps when location is confirmed.
+                <h2>Plan Your Visit to Mozar Palace</h2>
+
+                <p class="contact-intro">
+                  Whether you are planning a wedding, reception, family
+                  celebration, corporate event or a relaxing stay, our team is
+                  here to assist you.
                 </p>
+
+                <div class="contact-info-list">
+                  <div class="contact-info-item">
+                    <div class="contact-icon">
+                      <i class="fa-solid fa-location-dot"></i>
+                    </div>
+
+                    <div>
+                      <span>Address</span>
+                      <p>
+                        [Insert Street Address], [Insert City], [Insert State]
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="contact-info-item">
+                    <div class="contact-icon">
+                      <i class="fa-solid fa-phone"></i>
+                    </div>
+
+                    <div>
+                      <span>Phone</span>
+                      <p>
+                        <a href="tel:+910000000000"> +91-0000000000 </a>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="contact-info-item">
+                    <div class="contact-icon">
+                      <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+
+                    <div>
+                      <span>WhatsApp</span>
+                      <p>
+                        <a href="https://wa.me/910000000000" target="_blank">
+                          +91 0000000000
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="contact-info-item">
+                    <div class="contact-icon">
+                      <i class="fa-solid fa-envelope"></i>
+                    </div>
+
+                    <div>
+                      <span>Email</span>
+                      <p>
+                        <a href="mailto:events@mozarpalace.com">
+                          events@mozarpalace.com
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="contact-info-item">
+                    <div class="contact-icon">
+                      <i class="fa-regular fa-clock"></i>
+                    </div>
+
+                    <div>
+                      <span>Availability</span>
+                      <p>
+                        Monday – Sunday<br />
+                        9:00 AM – 9:00 PM
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="contact-actions">
+                  <a href="#enquiry" class="btn btn-gold">
+                    Plan Your Event
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+
+                  <a
+                    href="https://maps.google.com/"
+                    target="_blank"
+                    class="btn btn-outline"
+                  >
+                    Get Directions
+                    <i class="fa-solid fa-location-arrow"></i>
+                  </a>
+                </div>
+              </div>
+
+              <!-- RIGHT: MAP -->
+              <div class="contact-map">
+                <div class="map-card">
+                  <iframe
+                    src="https://www.google.com/maps?q=Mozar%20Palace&output=embed"
+                    loading="lazy"
+                    allowfullscreen=""
+                    referrerpolicy="no-referrer-when-downgrade"
+                  >
+                  </iframe>
+                </div>
+
+                <div class="map-caption">
+                  <div class="map-caption-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                  </div>
+
+                  <div>
+                    <strong>Find Mozar Palace</strong>
+                    <span>View our location and plan your journey.</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Testimonials inside Contact/Home -->
-        <div class="container section-light" style="margin-top: 3rem">
-          <h2 class="section-title text-center">Guest Experiences</h2>
-          <div class="ornament"></div>
-          <div class="testimonial-slider" id="testimonialSlider">
-            <div class="testimonial-slide active">
-              <p class="testimonial-text">
-                "[Insert a beautiful placeholder testimonial here about the
-                wonderful wedding experience.]"
-              </p>
-              <span class="testimonial-author">- [Guest Name]</span>
-            </div>
-            <div class="testimonial-slide">
-              <p class="testimonial-text">
-                "[Insert a placeholder testimonial regarding the excellent
-                corporate event management.]"
-              </p>
-              <span class="testimonial-author">- [Client Name]</span>
-            </div>
-            <div class="testimonial-slide">
-              <p class="testimonial-text">
-                "[Insert a placeholder testimonial regarding the royal ambience
-                and decor.]"
-              </p>
-              <span class="testimonial-author">- [Guest Name]</span>
+        <!-- CONTACT CTA -->
+        <div class="contact-cta">
+          <div class="container">
+            <div class="contact-cta-inner">
+              <div>
+                <span class="contact-label"
+                  >LET'S CREATE SOMETHING SPECIAL</span
+                >
+
+                <h2>Your Celebration Starts Here</h2>
+
+                <p>
+                  Tell us about your occasion and our team will help you plan
+                  the perfect experience at Mozar Palace.
+                </p>
+              </div>
+
+              <a href="#enquiry" class="btn btn-gold">
+                Make an Enquiry
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
             </div>
           </div>
-          <div class="slider-controls" id="sliderControls"></div>
         </div>
       </section>
 
@@ -3658,7 +5067,7 @@
           <a href="#home">Home</a>
           <a href="#about">About</a>
           <a href="#weddings">Weddings</a>
-          <a href="#spaces">Spaces</a>
+          <a href="#rooms">Rooms</a>
           <a href="#gallery">Gallery</a>
           <a href="#contact">Contact</a>
         </div>
@@ -3752,14 +5161,6 @@
       };
 
       // Populate placeholders
-      document.getElementById("conf-phone").innerText = businessInfo.phone;
-      document.getElementById("conf-whatsapp").innerText =
-        "+" + businessInfo.whatsapp;
-      document.getElementById("conf-email").innerText = businessInfo.email;
-      document.getElementById("conf-address").innerText =
-        `${businessInfo.address}, ${businessInfo.city}, ${businessInfo.state}`;
-      document.getElementById("conf-hours").innerText = businessInfo.hours;
-      document.getElementById("conf-mapbtn").href = businessInfo.mapUrl;
 
       document.getElementById("waBtn").href =
         `https://wa.me/${businessInfo.whatsapp}`;
@@ -3824,7 +5225,7 @@
 
       // Gallery Filtering
       const filterBtns = document.querySelectorAll(".filter-btn");
-      const galleryItems = document.querySelectorAll(".gallery-item");
+      //   const galleryItems = document.querySelectorAll(".gallery-item");
 
       filterBtns.forEach((btn) => {
         btn.addEventListener("click", () => {
@@ -3868,7 +5269,8 @@
 
       // Testimonial Slider
       const slides = document.querySelectorAll(".testimonial-slide");
-      const controlsContainer = document.getElementById("sliderControls");
+      const controlsContainer = document.createElement("div");
+      controlsContainer.className = "slider-controls";
       let currentSlide = 0;
 
       // Create dots
@@ -3877,7 +5279,9 @@
         dot.classList.add("slider-dot");
         if (i === 0) dot.classList.add("active");
         dot.addEventListener("click", () => goToSlide(i));
-        controlsContainer.appendChild(dot);
+        if (controlsContainer) {
+          controlsContainer.appendChild(dot);
+        }
       });
       const dots = document.querySelectorAll(".slider-dot");
 
@@ -4005,6 +5409,42 @@
         }
 
         startAutoSlide();
+      });
+
+      // Gallery page Filtering
+      const galleryFilters = document.querySelectorAll(".gallery-filter");
+      const galleryItems = document.querySelectorAll(".gallery-item");
+
+      galleryFilters.forEach((filter) => {
+        filter.addEventListener("click", () => {
+          const category = filter.dataset.filter;
+
+          galleryFilters.forEach((btn) => {
+            btn.classList.remove("active");
+          });
+
+          filter.classList.add("active");
+
+          galleryItems.forEach((item) => {
+            if (category === "all" || item.dataset.category === category) {
+              item.classList.remove("gallery-hidden");
+            } else {
+              item.classList.add("gallery-hidden");
+            }
+          });
+        });
+      });
+
+      //   LOAD MORE BUTTON GALLERY
+      const loadMoreBtn = document.getElementById("galleryLoadMore");
+      const moreGalleryItems = document.querySelectorAll(".gallery-more");
+
+      loadMoreBtn.addEventListener("click", function () {
+        moreGalleryItems.forEach(function (item) {
+          item.classList.add("show");
+        });
+
+        loadMoreBtn.style.display = "none";
       });
     </script>
   </body>
