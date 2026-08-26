@@ -325,8 +325,7 @@
         text-align: center;
         padding-top: 0;
         overflow: hidden;
-        background: url("images/herobg.jpeg")
-          center/cover no-repeat;
+        background: url("images/herobg.jpeg") center/cover no-repeat;
       }
       .hero::before {
         content: "";
@@ -4417,7 +4416,17 @@
                 <p>Fill in your details and we'll get in touch with you.</p>
               </div>
 
-              <form class="enquiry-form" action="#" method="POST">
+              <form
+                class="enquiry-form"
+                action="https://formsubmit.co/mozarspalace@gmail.com"
+                method="POST"
+              >
+                <input
+                  type="hidden"
+                  name="_subject"
+                  value="New Enquiry - Mozar Palace"
+                />
+                <input type="hidden" name="_template" value="table" />
                 <div class="form-row">
                   <div class="form-group">
                     <label for="guest-name">Full Name</label>
@@ -4932,10 +4941,7 @@
               </div>
 
               <div class="room-image">
-                <img
-                  src="./images/Rooms/Room2.jpeg"
-                  alt="Mozar Palace room"
-                />
+                <img src="./images/Rooms/Room2.jpeg" alt="Mozar Palace room" />
               </div>
 
               <div class="room-image">
@@ -4952,7 +4958,7 @@
                 />
               </div>
 
-              <div class="room-image ">
+              <div class="room-image">
                 <img
                   src="./images/Rooms/Room5.jpeg"
                   alt="Mozar Palace room and stay"
@@ -5895,7 +5901,8 @@
 
           <form
             id="enquiryForm"
-            onsubmit="handleFormSubmit(event)"
+            action="https://formsubmit.co/mozarspalace@gmail.com"
+            method="POST"
             style="
               background: rgba(255, 255, 255, 0.02);
               padding: 3rem;
@@ -5903,11 +5910,18 @@
               border-radius: 4px;
             "
           >
+            <input
+              type="hidden"
+              name="_subject"
+              value="New Enquiry - Mozar Palace"
+            />
+            <input type="hidden" name="_template" value="table" />
             <div class="form-group">
               <input
                 type="text"
                 class="form-control"
                 id="name"
+                name="name"
                 placeholder="Full Name *"
                 required
               />
@@ -5918,6 +5932,7 @@
                   type="tel"
                   class="form-control"
                   id="phone"
+                  name="phone"
                   placeholder="Phone Number *"
                   required
                 />
@@ -5927,6 +5942,7 @@
                   type="email"
                   class="form-control"
                   id="email"
+                  name="email"
                   placeholder="Email Address *"
                   required
                 />
@@ -5934,7 +5950,12 @@
             </div>
             <div class="grid-2" style="gap: 1.5rem; margin-bottom: 0">
               <div class="form-group">
-                <select class="form-control" id="eventType" required>
+                <select
+                  class="form-control"
+                  id="eventType"
+                  name="event_type"
+                  required
+                >
                   <option value="" disabled selected>
                     Select Event Type *
                   </option>
@@ -5950,6 +5971,7 @@
                   type="date"
                   class="form-control"
                   id="eventDate"
+                  name="event_date"
                   required
                   style="color: rgba(255, 255, 255, 0.5)"
                   onchange="this.style.color = 'white'"
@@ -5962,12 +5984,13 @@
                   type="number"
                   class="form-control"
                   id="guests"
+                  name="guests"
                   placeholder="Estimated Number of Guests *"
                   required
                 />
               </div>
               <div class="form-group">
-                <select class="form-control" id="venuePref">
+                <select class="form-control" id="venuePref" name="venue">
                   <option value="" disabled selected>
                     Preferred Venue Space
                   </option>
@@ -5982,6 +6005,7 @@
               <textarea
                 class="form-control"
                 id="message"
+                name="message"
                 rows="4"
                 placeholder="Additional Details / Message"
               ></textarea>
@@ -6066,7 +6090,7 @@
     <!-- Floating Elements -->
     <div class="floating-btns">
       <a
-        href="https://wa.me/910000000000"
+        href="https://wa.me/919820483587"
         target="_blank"
         class="float-btn"
         id="waBtn"
@@ -6079,7 +6103,7 @@
         </svg>
       </a>
       <a
-        href="tel:+910000000000"
+        href="tel:+919820483587"
         class="float-btn"
         id="callBtn"
         title="Call Us"
@@ -6118,8 +6142,8 @@
 
     <!-- Mobile Sticky CTA -->
     <div class="sticky-mobile-cta">
-      <a href="tel:+910000000000" id="mobCall">Call</a>
-      <a href="https://wa.me/910000000000" id="mobWa">WhatsApp</a>
+      <a href="tel:+919820483587" id="mobCall">Call</a>
+      <a href="https://wa.me/919820483587" id="mobWa">WhatsApp</a>
       <a
         href="#enquiry"
         style="background: var(--primary-bg); color: var(--accent-luxury)"
@@ -6136,8 +6160,8 @@
     <script>
       // --- CONFIGURATION OBJECT ---
       const businessInfo = {
-        phone: "+91-0000000000",
-        whatsapp: "910000000000", // no '+' for wa.me link
+        phone: "+91-9820483587",
+        whatsapp: "919820483587", // no '+' for wa.me link
         email: "events@mozarpalace.com",
         address: "[Insert Street Address]",
         city: "[Insert City]",
@@ -6285,18 +6309,18 @@
       }, 5000);
 
       // Form Handling
-      function handleFormSubmit(e) {
-        e.preventDefault();
-        // Simulate form submission
-        document.getElementById("enquiryForm").style.display = "none";
-        document.getElementById("formSuccess").style.display = "block";
-      }
+      // function handleFormSubmit(e) {
+      //   e.preventDefault();
+      //   // Simulate form submission
+      //   document.getElementById("enquiryForm").style.display = "none";
+      //   document.getElementById("formSuccess").style.display = "block";
+      // }
 
-      function resetForm() {
-        document.getElementById("enquiryForm").reset();
-        document.getElementById("enquiryForm").style.display = "block";
-        document.getElementById("formSuccess").style.display = "none";
-      }
+      // function resetForm() {
+      //   document.getElementById("enquiryForm").reset();
+      //   document.getElementById("enquiryForm").style.display = "block";
+      //   document.getElementById("formSuccess").style.display = "none";
+      // }
 
       /* =========================================
    PROPERTY GALLERY SLIDER
